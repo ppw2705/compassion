@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24C449D81F28DF4F00C0D3FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C449D71F28DF4F00C0D3FC /* AppDelegate.swift */; };
+		24C449DA1F28DF4F00C0D3FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C449D91F28DF4F00C0D3FC /* ViewController.swift */; };
+		24C449DD1F28DF4F00C0D3FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C449DB1F28DF4F00C0D3FC /* Main.storyboard */; };
+		24C449DF1F28DF4F00C0D3FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C449DE1F28DF4F00C0D3FC /* Assets.xcassets */; };
+		24C449E21F28DF4F00C0D3FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24C449E01F28DF4F00C0D3FC /* LaunchScreen.storyboard */; };
+		24C449ED1F28DF4F00C0D3FC /* CompassionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C449EC1F28DF4F00C0D3FC /* CompassionTests.swift */; };
+		24C449F81F28DF4F00C0D3FC /* CompassionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C449F71F28DF4F00C0D3FC /* CompassionUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24C449E91F28DF4F00C0D3FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24C449CC1F28DF4F00C0D3FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24C449D31F28DF4F00C0D3FC;
+			remoteInfo = Compassion;
+		};
+		24C449F41F28DF4F00C0D3FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24C449CC1F28DF4F00C0D3FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24C449D31F28DF4F00C0D3FC;
+			remoteInfo = Compassion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24C449D41F28DF4F00C0D3FC /* Compassion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compassion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24C449D71F28DF4F00C0D3FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		24C449D91F28DF4F00C0D3FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		24C449DC1F28DF4F00C0D3FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		24C449DE1F28DF4F00C0D3FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		24C449E11F28DF4F00C0D3FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		24C449E31F28DF4F00C0D3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24C449E81F28DF4F00C0D3FC /* CompassionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompassionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24C449EC1F28DF4F00C0D3FC /* CompassionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassionTests.swift; sourceTree = "<group>"; };
+		24C449EE1F28DF4F00C0D3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24C449F31F28DF4F00C0D3FC /* CompassionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompassionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24C449F71F28DF4F00C0D3FC /* CompassionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassionUITests.swift; sourceTree = "<group>"; };
+		24C449F91F28DF4F00C0D3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24C449D11F28DF4F00C0D3FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24C449E51F28DF4F00C0D3FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24C449F01F28DF4F00C0D3FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24C449CB1F28DF4F00C0D3FC = {
+			isa = PBXGroup;
+			children = (
+				24C449D61F28DF4F00C0D3FC /* Compassion */,
+				24C449EB1F28DF4F00C0D3FC /* CompassionTests */,
+				24C449F61F28DF4F00C0D3FC /* CompassionUITests */,
+				24C449D51F28DF4F00C0D3FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		24C449D51F28DF4F00C0D3FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24C449D41F28DF4F00C0D3FC /* Compassion.app */,
+				24C449E81F28DF4F00C0D3FC /* CompassionTests.xctest */,
+				24C449F31F28DF4F00C0D3FC /* CompassionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24C449D61F28DF4F00C0D3FC /* Compassion */ = {
+			isa = PBXGroup;
+			children = (
+				24C449D71F28DF4F00C0D3FC /* AppDelegate.swift */,
+				24C449D91F28DF4F00C0D3FC /* ViewController.swift */,
+				24C449DB1F28DF4F00C0D3FC /* Main.storyboard */,
+				24C449DE1F28DF4F00C0D3FC /* Assets.xcassets */,
+				24C449E01F28DF4F00C0D3FC /* LaunchScreen.storyboard */,
+				24C449E31F28DF4F00C0D3FC /* Info.plist */,
+			);
+			path = Compassion;
+			sourceTree = "<group>";
+		};
+		24C449EB1F28DF4F00C0D3FC /* CompassionTests */ = {
+			isa = PBXGroup;
+			children = (
+				24C449EC1F28DF4F00C0D3FC /* CompassionTests.swift */,
+				24C449EE1F28DF4F00C0D3FC /* Info.plist */,
+			);
+			path = CompassionTests;
+			sourceTree = "<group>";
+		};
+		24C449F61F28DF4F00C0D3FC /* CompassionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				24C449F71F28DF4F00C0D3FC /* CompassionUITests.swift */,
+				24C449F91F28DF4F00C0D3FC /* Info.plist */,
+			);
+			path = CompassionUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24C449D31F28DF4F00C0D3FC /* Compassion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24C449FC1F28DF4F00C0D3FC /* Build configuration list for PBXNativeTarget "Compassion" */;
+			buildPhases = (
+				24C449D01F28DF4F00C0D3FC /* Sources */,
+				24C449D11F28DF4F00C0D3FC /* Frameworks */,
+				24C449D21F28DF4F00C0D3FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Compassion;
+			productName = Compassion;
+			productReference = 24C449D41F28DF4F00C0D3FC /* Compassion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		24C449E71F28DF4F00C0D3FC /* CompassionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24C449FF1F28DF4F00C0D3FC /* Build configuration list for PBXNativeTarget "CompassionTests" */;
+			buildPhases = (
+				24C449E41F28DF4F00C0D3FC /* Sources */,
+				24C449E51F28DF4F00C0D3FC /* Frameworks */,
+				24C449E61F28DF4F00C0D3FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24C449EA1F28DF4F00C0D3FC /* PBXTargetDependency */,
+			);
+			name = CompassionTests;
+			productName = CompassionTests;
+			productReference = 24C449E81F28DF4F00C0D3FC /* CompassionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		24C449F21F28DF4F00C0D3FC /* CompassionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24C44A021F28DF4F00C0D3FC /* Build configuration list for PBXNativeTarget "CompassionUITests" */;
+			buildPhases = (
+				24C449EF1F28DF4F00C0D3FC /* Sources */,
+				24C449F01F28DF4F00C0D3FC /* Frameworks */,
+				24C449F11F28DF4F00C0D3FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24C449F51F28DF4F00C0D3FC /* PBXTargetDependency */,
+			);
+			name = CompassionUITests;
+			productName = CompassionUITests;
+			productReference = 24C449F31F28DF4F00C0D3FC /* CompassionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24C449CC1F28DF4F00C0D3FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Geecon;
+				TargetAttributes = {
+					24C449D31F28DF4F00C0D3FC = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = QDYX5WECPU;
+						ProvisioningStyle = Automatic;
+					};
+					24C449E71F28DF4F00C0D3FC = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = QDYX5WECPU;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 24C449D31F28DF4F00C0D3FC;
+					};
+					24C449F21F28DF4F00C0D3FC = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = QDYX5WECPU;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 24C449D31F28DF4F00C0D3FC;
+					};
+				};
+			};
+			buildConfigurationList = 24C449CF1F28DF4F00C0D3FC /* Build configuration list for PBXProject "Compassion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 24C449CB1F28DF4F00C0D3FC;
+			productRefGroup = 24C449D51F28DF4F00C0D3FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24C449D31F28DF4F00C0D3FC /* Compassion */,
+				24C449E71F28DF4F00C0D3FC /* CompassionTests */,
+				24C449F21F28DF4F00C0D3FC /* CompassionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24C449D21F28DF4F00C0D3FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24C449E21F28DF4F00C0D3FC /* LaunchScreen.storyboard in Resources */,
+				24C449DF1F28DF4F00C0D3FC /* Assets.xcassets in Resources */,
+				24C449DD1F28DF4F00C0D3FC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24C449E61F28DF4F00C0D3FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24C449F11F28DF4F00C0D3FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24C449D01F28DF4F00C0D3FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24C449DA1F28DF4F00C0D3FC /* ViewController.swift in Sources */,
+				24C449D81F28DF4F00C0D3FC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24C449E41F28DF4F00C0D3FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24C449ED1F28DF4F00C0D3FC /* CompassionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24C449EF1F28DF4F00C0D3FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24C449F81F28DF4F00C0D3FC /* CompassionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24C449EA1F28DF4F00C0D3FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24C449D31F28DF4F00C0D3FC /* Compassion */;
+			targetProxy = 24C449E91F28DF4F00C0D3FC /* PBXContainerItemProxy */;
+		};
+		24C449F51F28DF4F00C0D3FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24C449D31F28DF4F00C0D3FC /* Compassion */;
+			targetProxy = 24C449F41F28DF4F00C0D3FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		24C449DB1F28DF4F00C0D3FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24C449DC1F28DF4F00C0D3FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		24C449E01F28DF4F00C0D3FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24C449E11F28DF4F00C0D3FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		24C449FA1F28DF4F00C0D3FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		24C449FB1F28DF4F00C0D3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		24C449FD1F28DF4F00C0D3FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QDYX5WECPU;
+				INFOPLIST_FILE = Compassion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.geecon.Compassion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		24C449FE1F28DF4F00C0D3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QDYX5WECPU;
+				INFOPLIST_FILE = Compassion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.geecon.Compassion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		24C44A001F28DF4F00C0D3FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QDYX5WECPU;
+				INFOPLIST_FILE = CompassionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.geecon.CompassionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Compassion.app/Compassion";
+			};
+			name = Debug;
+		};
+		24C44A011F28DF4F00C0D3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = QDYX5WECPU;
+				INFOPLIST_FILE = CompassionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.geecon.CompassionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Compassion.app/Compassion";
+			};
+			name = Release;
+		};
+		24C44A031F28DF4F00C0D3FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = QDYX5WECPU;
+				INFOPLIST_FILE = CompassionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.geecon.CompassionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Compassion;
+			};
+			name = Debug;
+		};
+		24C44A041F28DF4F00C0D3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = QDYX5WECPU;
+				INFOPLIST_FILE = CompassionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.geecon.CompassionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Compassion;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24C449CF1F28DF4F00C0D3FC /* Build configuration list for PBXProject "Compassion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24C449FA1F28DF4F00C0D3FC /* Debug */,
+				24C449FB1F28DF4F00C0D3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24C449FC1F28DF4F00C0D3FC /* Build configuration list for PBXNativeTarget "Compassion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24C449FD1F28DF4F00C0D3FC /* Debug */,
+				24C449FE1F28DF4F00C0D3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		24C449FF1F28DF4F00C0D3FC /* Build configuration list for PBXNativeTarget "CompassionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24C44A001F28DF4F00C0D3FC /* Debug */,
+				24C44A011F28DF4F00C0D3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		24C44A021F28DF4F00C0D3FC /* Build configuration list for PBXNativeTarget "CompassionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24C44A031F28DF4F00C0D3FC /* Debug */,
+				24C44A041F28DF4F00C0D3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 24C449CC1F28DF4F00C0D3FC /* Project object */;
+}
