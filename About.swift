@@ -4,7 +4,7 @@
 //
 //  Created by Geecon System Ltd. on 11/08/17.
 //  Copyright © 2017 Geecon. All rights reserved.
-//Edited by ppw2705u@gmail.com
+//Edited by local
 
 import UIKit
 
