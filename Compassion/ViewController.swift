@@ -186,7 +186,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
          print(completelyVisible)*/
         if lastContentOffset < scrollView.contentOffset.y {
             //print("bottom")
-            let cellRect = self.blogTableView.rectForRow(at: IndexPath(row:0,section:1))
+            let cellRect = self.blogTableView.rectForRow(at: IndexPath(row:1,section:1))
             let completelyVisible = self.blogTableView.bounds.contains(cellRect)
             var cellToShow: singleChildTableViewCell? = (self.blogTableView.cellForRow(at: IndexPath(row:0,section:1)) as? singleChildTableViewCell)
             
@@ -277,19 +277,51 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     @IBAction func act(_ sender: UIButton) {
-        
+        var forward = false
+        var tableCell: ChildTableViewCell? = (self.blogTableView.cellForRow(at: IndexPath(row:1,section:0)) as? ChildTableViewCell)
+        tableCell?.collectionView.reloadData()
         if sender.tag == 10 {
-            currentChild -= 1
+            if currentChild == 0 {
+                currentChild = childName.count - 1
+            } else {
+                currentChild -= 1
+            }
+            forward = false
         }
         
         if sender.tag == 11 {
-            currentChild += 1
+            if currentChild == childName.count - 1 {
+                currentChild = 0
+            } else {
+                currentChild += 1
+            }
+            forward = true
         }
         
-        /*var tableCell: ChildTableViewCell? = (self.blogTableView.cellForRow(at: IndexPath(row:1,section:0)) as? ChildTableViewCell)
+    
         
-        tableCell?.collectionView.selectItem(at: IndexPath(row:currentChild,section:0), animated: true, scrollPosition: .centeredHorizontally)
-        */
+
+        var childCell = tableCell?.collectionView.cellForItem(at: IndexPath(row:currentChild,section:0)) as? ChildCollectionViewCell
+        childCell?.Img.alpha = 1
+        
+        let cell = self.blogTableView.dequeueReusableCell(withIdentifier: "singlechildcell", for: IndexPath(row:2,section:0)) as! singleChildTableViewCell;
+
+            cell.Namelbl.text = childName[currentChild]
+            let url = NSURL(string:childImg[currentChild])
+            let data = NSData(contentsOf:url! as URL)
+            if data != nil {
+                cell.childImage.image = UIImage(data:data! as Data)
+            }
+        if forward {
+            self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .left)
+        } else {
+            self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .right)
+        }
+        
+            
+        //}
+        //tableCell?.collectionView.selectItem(at: IndexPath(row:0,section:0), animated: false, scrollPosition: .centeredHorizontally)//(at: IndexPath(row:currentChild,section:0), animated: false, scrollPosition: .centeredHorizontally)
+        //tableCell?.collectionView.reloadData()
     }
     
     

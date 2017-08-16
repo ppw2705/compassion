@@ -41,9 +41,13 @@ class AboutMeViewController: UIViewController, UIScrollViewDelegate {
         pageControl.numberOfPages = slides.count
         pageControl.currentPage = 0
         MyphotosView.isHidden = true
+        MyPhotosBtn.isHighlighted = false
+        MyLifeBtn.isHighlighted = false
+        MyPhotosBtn.isSelected = false
+        MyLifeBtn.isSelected = false
         //view.bringSubview(toFront: pageControl)
         self.scroll_me.contentSize = CGSize(width:750, height: 02)
-
+        
     }
     
     func createSlides() -> [UIView] {
@@ -90,17 +94,25 @@ class AboutMeViewController: UIViewController, UIScrollViewDelegate {
     }
 
     @IBAction func MylifeAct(_ sender: Any) {
+        MyPhotosBtn.isHighlighted = false
+        MyLifeBtn.isHighlighted = false
+        MyPhotosBtn.isSelected = false
+        MyLifeBtn.isSelected = false
         var frame: CGRect = scrollView.frame
         frame.origin.x = frame.size.width * 0
         frame.origin.y = 0
         scrollView.scrollRectToVisible(frame, animated: true)
         pageControl.currentPage = 0
+
         MyLifeBtn.setImage(selectedimage[0], for: .normal)
         MyPhotosBtn.setImage(unselectedimage[1], for: .normal)
-        
     }
     
     @IBAction func MyPhotosAct(_ sender: Any) {
+        MyPhotosBtn.isHighlighted = false
+        MyLifeBtn.isHighlighted = false
+        MyPhotosBtn.isSelected = false
+        MyLifeBtn.isSelected = false
         var frame: CGRect = scrollView.frame
         frame.origin.x = frame.size.width * 1
         frame.origin.y = 0
