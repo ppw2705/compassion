@@ -55,6 +55,13 @@
 		4F51AEE61F39CDD000ECCE89 /* MyPhotos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F51AEE21F39CDD000ECCE89 /* MyPhotos.xib */; };
 		4F51AEE81F39CF1700ECCE89 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F51AEE71F39CF1700ECCE89 /* AboutMeViewController.swift */; };
 		4F51AEEA1F39D3F400ECCE89 /* CUIMainPagecontaineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F51AEE91F39D3F400ECCE89 /* CUIMainPagecontaineVC.swift */; };
+		4F8D28C91F44150E00B7A766 /* CorrespondanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D28C81F44150E00B7A766 /* CorrespondanceController.swift */; };
+		4F8D28CB1F44191500B7A766 /* From.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D28CA1F44191500B7A766 /* From.swift */; };
+		4F8D28CD1F44195500B7A766 /* From.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8D28CC1F44195500B7A766 /* From.xib */; };
+		4F8D28CF1F4419AA00B7A766 /* To.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D28CE1F4419AA00B7A766 /* To.swift */; };
+		4F8D28D11F441C6C00B7A766 /* To.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8D28D01F441C6C00B7A766 /* To.xib */; };
+		4F8D28D51F442AE900B7A766 /* LettersCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D28D31F442AE900B7A766 /* LettersCollectionCell.swift */; };
+		4F8D28D61F442AE900B7A766 /* LettersCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8D28D41F442AE900B7A766 /* LettersCollectionCell.xib */; };
 		4FABB2351F3C63E900B0748B /* MyProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FABB2341F3C63E900B0748B /* MyProjectController.swift */; };
 		4FCE73E81F3D730500D992C2 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCE73E71F3D730500D992C2 /* About.swift */; };
 		4FCE73EA1F3D73C500D992C2 /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FCE73E91F3D73C500D992C2 /* About.xib */; };
@@ -136,6 +143,13 @@
 		4F51AEE21F39CDD000ECCE89 /* MyPhotos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPhotos.xib; sourceTree = "<group>"; };
 		4F51AEE71F39CF1700ECCE89 /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		4F51AEE91F39D3F400ECCE89 /* CUIMainPagecontaineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CUIMainPagecontaineVC.swift; sourceTree = "<group>"; };
+		4F8D28C81F44150E00B7A766 /* CorrespondanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrespondanceController.swift; sourceTree = "<group>"; };
+		4F8D28CA1F44191500B7A766 /* From.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = From.swift; sourceTree = "<group>"; };
+		4F8D28CC1F44195500B7A766 /* From.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = From.xib; sourceTree = "<group>"; };
+		4F8D28CE1F4419AA00B7A766 /* To.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = To.swift; sourceTree = "<group>"; };
+		4F8D28D01F441C6C00B7A766 /* To.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = To.xib; sourceTree = "<group>"; };
+		4F8D28D31F442AE900B7A766 /* LettersCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LettersCollectionCell.swift; sourceTree = "<group>"; };
+		4F8D28D41F442AE900B7A766 /* LettersCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LettersCollectionCell.xib; sourceTree = "<group>"; };
 		4FABB2341F3C63E900B0748B /* MyProjectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProjectController.swift; sourceTree = "<group>"; };
 		4FCE73E71F3D730500D992C2 /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = About.swift; path = ../About.swift; sourceTree = "<group>"; };
 		4FCE73E91F3D73C500D992C2 /* About.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
@@ -206,6 +220,7 @@
 			children = (
 				24F4EE761F3B417200916F64 /* View Controllers */,
 				24F4EE751F3B3BD900916F64 /* XIB */,
+				4F8D28D21F441CA300B7A766 /* Readletters */,
 				24E2700C1F2F1D0D00F8D3A6 /* StoryBoards */,
 				24C449D71F28DF4F00C0D3FC /* AppDelegate.swift */,
 				24C449DE1F28DF4F00C0D3FC /* Assets.xcassets */,
@@ -296,6 +311,7 @@
 				4F341E821F31E6D200294EC5 /* LoginController.swift */,
 				4F341E831F31E6D200294EC5 /* LoginViewController.swift */,
 				2460D9611F3C18FA00E6B52D /* MyCommunityVC.swift */,
+				4F8D28C81F44150E00B7A766 /* CorrespondanceController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -322,6 +338,19 @@
 				4F51AEE21F39CDD000ECCE89 /* MyPhotos.xib */,
 			);
 			name = "About Me";
+			sourceTree = "<group>";
+		};
+		4F8D28D21F441CA300B7A766 /* Readletters */ = {
+			isa = PBXGroup;
+			children = (
+				4F8D28D01F441C6C00B7A766 /* To.xib */,
+				4F8D28CE1F4419AA00B7A766 /* To.swift */,
+				4F8D28CC1F44195500B7A766 /* From.xib */,
+				4F8D28CA1F44191500B7A766 /* From.swift */,
+				4F8D28D31F442AE900B7A766 /* LettersCollectionCell.swift */,
+				4F8D28D41F442AE900B7A766 /* LettersCollectionCell.xib */,
+			);
+			name = Readletters;
 			sourceTree = "<group>";
 		};
 		A7A17F53EE6BD464BED1B103 /* Frameworks */ = {
@@ -452,6 +481,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				24F70E3C1F3C050D003C1CE2 /* WeatherNMap.xib in Resources */,
+				4F8D28CD1F44195500B7A766 /* From.xib in Resources */,
+				4F8D28D11F441C6C00B7A766 /* To.xib in Resources */,
+				4F8D28D61F442AE900B7A766 /* LettersCollectionCell.xib in Resources */,
 				4F51AEE61F39CDD000ECCE89 /* MyPhotos.xib in Resources */,
 				24C449E21F28DF4F00C0D3FC /* LaunchScreen.storyboard in Resources */,
 				24C449DF1F28DF4F00C0D3FC /* Assets.xcassets in Resources */,
@@ -628,10 +660,13 @@
 				246C1EFF1F2ED68200F7F107 /* BlogHeaderTableViewCell.swift in Sources */,
 				4F2B1F0D1F333DD6007376D8 /* NotanuserController.swift in Sources */,
 				4F341E941F31E73500294EC5 /* GiftThanksController.swift in Sources */,
+				4F8D28C91F44150E00B7A766 /* CorrespondanceController.swift in Sources */,
+				4F8D28D51F442AE900B7A766 /* LettersCollectionCell.swift in Sources */,
 				2460D9621F3C18FA00E6B52D /* MyCommunityVC.swift in Sources */,
 				24F70E341F3BF9B3003C1CE2 /* Food.swift in Sources */,
 				24C44A0A1F29928700C0D3FC /* NotifyTableViewCell.swift in Sources */,
 				24C449DA1F28DF4F00C0D3FC /* ViewController.swift in Sources */,
+				4F8D28CF1F4419AA00B7A766 /* To.swift in Sources */,
 				4F51AEE81F39CF1700ECCE89 /* AboutMeViewController.swift in Sources */,
 				4F341E851F31E6D200294EC5 /* LoginViewController.swift in Sources */,
 				4F341E9A1F31E73500294EC5 /* MyLifeController.swift in Sources */,
@@ -660,6 +695,7 @@
 				4FABB2351F3C63E900B0748B /* MyProjectController.swift in Sources */,
 				24C449D81F28DF4F00C0D3FC /* AppDelegate.swift in Sources */,
 				4FCE73EC1F3D780400D992C2 /* whatlearn.swift in Sources */,
+				4F8D28CB1F44191500B7A766 /* From.swift in Sources */,
 				24C44A0E1F29DA5E00C0D3FC /* ChildCollectionViewCell.swift in Sources */,
 				24C44A101F29DED400C0D3FC /* ChildTableViewCell.swift in Sources */,
 				4F51AEE51F39CDD000ECCE89 /* MyPhotos.swift in Sources */,
