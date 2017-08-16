@@ -4,7 +4,7 @@
 //
 //  Created by Grevin on 26/07/17.
 //  Copyright © 2017 Geecon. All rights reserved.
-//
+// Paresh
 
 import UIKit
 
@@ -63,10 +63,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.blur_view.isHidden=true
         
         // Do any additional setup after loading the view, typically from a nib.
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.someAction(_:)))
+        /*let gesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.someAction(_:)))
         self.view.addGestureRecognizer(gesture)
         self.scroll_view.contentSize = CGSize(width:270, height: 650)
-        
+        */
         
     }
     
@@ -98,15 +98,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
+        currentChild = indexPath.row
         let colcell = collectionView.cellForItem(at: indexPath) as! ChildCollectionViewCell
         colcell.Img.alpha = 1
-        //cell?.layer.borderWidth = 2.0
-        //cell?.layer.borderColor = UIColor.gray.cgColor
-        
-        print("Colection Cell Click")
-        currentChild = indexPath.row
+
         
        let cell = self.blogTableView.dequeueReusableCell(withIdentifier: "singlechildcell", for: IndexPath(row:2,section:0)) as! singleChildTableViewCell;
         cell.Namelbl.text = childName[currentChild]
@@ -116,7 +115,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.childImage.image = UIImage(data:data! as Data)
         }
         self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .none)
-        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let colcell = collectionView.cellForItem(at: indexPath) as! ChildCollectionViewCell
+        colcell.Img.alpha = 0.5
     }
 
     
@@ -261,40 +264,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 1 {
             var cell:BlogHeaderTableViewCell = self.blogTableView.dequeueReusableCell(withIdentifier: "headercell") as! BlogHeaderTableViewCell;
-            //cell.isHidden = true
             return cell;
         }
         return nil
     }
     
-    /*func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-     let cell = self.blogTableView.dequeueReusableCell(withIdentifier: "headercell") as! BlogHeaderTableViewCell
-     
-     let position: CGPoint = cell.convert(CGPoint.zero, to: self.blogTableView)
-     if let indexPath = self.blogTableView.indexPathForRow(at: position)
-     {
-     let section = indexPath.section
-     //print("will display section: \(section)")
-     if section == 1 && !sectionVisible {
-     sectionVisible = true
-     var indexSet: IndexSet = IndexSet()
-     indexSet.insert(section)
-     self.blogTableView.reloadSections(indexSet, with: .none)
-     } else {
-     sectionVisible = false
-     self.blogTableView.reloadData()
-     }
-     }
-     }*/
-    
-    /*func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-     if section == 0 {
-     return nil
-     }
-     else {
-     return "Hello"
-     }
-     }*/
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2;
@@ -304,18 +278,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func act(_ sender: UIButton) {
         
-        let cell = self.blogTableView.dequeueReusableCell(withIdentifier: "singlechildcell", for: IndexPath(row:2,section:0)) as! singleChildTableViewCell;
-        
         if sender.tag == 10 {
-            cell.Namelbl.text = "Left"
-            self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .right)        //blogTableView.reloadData()
+            currentChild -= 1
         }
         
         if sender.tag == 11 {
-            cell.Namelbl.text = "Right"
-            self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .left)        //blogTableView.reloadData()
-            
+            currentChild += 1
         }
+        
+        /*var tableCell: ChildTableViewCell? = (self.blogTableView.cellForRow(at: IndexPath(row:1,section:0)) as? ChildTableViewCell)
+        
+        tableCell?.collectionView.selectItem(at: IndexPath(row:currentChild,section:0), animated: true, scrollPosition: .centeredHorizontally)
+        */
     }
     
     
