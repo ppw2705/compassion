@@ -32,6 +32,9 @@ class CUIMainPagecontaineVC: UIViewController {
     var m_cMyCommunityVC    : MyCommunityVC!
     var m_cMyprojectVC      : MyProjectController!
     
+    var m_cReadletters      : CorrespondanceController!
+
+    
     var isalreadyClicked = false as Bool;
     
     
@@ -52,6 +55,10 @@ class CUIMainPagecontaineVC: UIViewController {
         //My Project VC
         self.m_cMyprojectVC = self.storyboard?.instantiateViewController(withIdentifier: "m_cMyprojectVC") as! MyProjectController
         self.m_cMyprojectVC.Intitialize(cMainPagecontaineVC: self)
+        
+        self.m_cReadletters = self.storyboard?.instantiateViewController(withIdentifier: "m_cReadletters") as! CorrespondanceController
+        self.m_cReadletters.Intitialize(cMainPagecontaineVC: self)
+
 
         
     }
@@ -88,6 +95,16 @@ class CUIMainPagecontaineVC: UIViewController {
     }
     
     
+    @IBAction func rEadletters(_ sender: Any) {
+        
+        self.ShowReadlettersC()
+    }
+    
+    
+    
+    
+    
+    
     
 
     
@@ -100,7 +117,6 @@ class CUIMainPagecontaineVC: UIViewController {
 
         }
         
-       
         self.m_cHomePageVC.view.frame = self.m_cContainerView.bounds
         self.m_cContainerView.addSubview(self.m_cHomePageVC.view)
         self.m_cHomePageVC.didMove(toParentViewController: self)
@@ -110,6 +126,8 @@ class CUIMainPagecontaineVC: UIViewController {
         self.m_cHomeBtn.setImage(UIImage(named:"home1"), for: .normal)
         self.m_cAboutBtn.setImage(UIImage(named:"about-me"), for: .normal)
         self.m_cMyCommunityBtn.setImage(UIImage(named:"community"), for: .normal)
+        self.m_cMyProjectBtn.setImage(UIImage(named:"my-project"), for: .normal)
+        self.m_cMyProjectLbl.textColor = UIColor.lightGray
         self.m_cHomeLbl.textColor = UIColor.black
         self.m_cAboutLbl.textColor = UIColor.lightGray
         self.m_cMyCommunityLbl.textColor = UIColor.lightGray
@@ -132,6 +150,8 @@ class CUIMainPagecontaineVC: UIViewController {
         self.m_cHomeBtn.setImage(UIImage(named:"home"), for: .normal)
         self.m_cAboutBtn.setImage(UIImage(named:"about-me1"), for: .normal)
         self.m_cMyCommunityBtn.setImage(UIImage(named:"community"), for: .normal)
+        self.m_cMyProjectBtn.setImage(UIImage(named:"my-project"), for: .normal)
+        self.m_cMyProjectLbl.textColor = UIColor.lightGray
         self.m_cHomeLbl.textColor = UIColor.lightGray
         self.m_cAboutLbl.textColor = UIColor.black
         self.m_cMyCommunityLbl.textColor = UIColor.lightGray
@@ -155,6 +175,8 @@ class CUIMainPagecontaineVC: UIViewController {
         self.m_cHomeBtn.setImage(UIImage(named:"home"), for: .normal)
         self.m_cAboutBtn.setImage(UIImage(named:"about-me"), for: .normal)
         self.m_cMyCommunityBtn.setImage(UIImage(named:"community1"), for: .normal)
+        self.m_cMyProjectBtn.setImage(UIImage(named:"my-project"), for: .normal)
+        self.m_cMyProjectLbl.textColor = UIColor.lightGray
         self.m_cHomeLbl.textColor = UIColor.lightGray
         self.m_cAboutLbl.textColor = UIColor.lightGray
         self.m_cMyCommunityLbl.textColor = UIColor.black
@@ -170,7 +192,6 @@ class CUIMainPagecontaineVC: UIViewController {
             self.m_cCurrentVC = m_cMyprojectVC
             
         }
-        
         self.m_cMyprojectVC.view.frame = self.m_cContainerView.bounds
         self.m_cContainerView.addSubview(self.m_cMyprojectVC.view)
         self.m_cMyprojectVC.didMove(toParentViewController: self)
@@ -178,12 +199,40 @@ class CUIMainPagecontaineVC: UIViewController {
         self.m_cCurrentVC = self.m_cMyprojectVC
         self.m_cHomeBtn.setImage(UIImage(named:"home"), for: .normal)
         self.m_cAboutBtn.setImage(UIImage(named:"about-me"), for: .normal)
-        self.m_cMyCommunityBtn.setImage(UIImage(named:"community1"), for: .normal)
+        self.m_cMyCommunityBtn.setImage(UIImage(named:"community"), for: .normal)
+        self.m_cMyProjectBtn.setImage(UIImage(named:"my-project1"), for: .normal)
+        self.m_cMyProjectLbl.textColor = UIColor.black
         self.m_cHomeLbl.textColor = UIColor.lightGray
         self.m_cAboutLbl.textColor = UIColor.lightGray
-        self.m_cMyCommunityLbl.textColor = UIColor.black
+        self.m_cMyCommunityLbl.textColor = UIColor.lightGray
     }
 
+    
+    
+    
+    func ShowReadlettersC()
+    {
+            menu_iconobj.setImage(UIImage(named: "middle-button"), for: .normal)
+            menu_views.isHidden = true
+            blur_views.isHidden = true
+            isalreadyClicked = true
+        
+        if (self.m_cCurrentVC != nil) && (self.m_cCurrentVC != m_cReadletters)
+        {
+            
+            self.m_cCurrentVC = m_cReadletters
+            
+        }
+        self.m_cReadletters.view.frame = self.m_cContainerView.bounds
+        self.m_cContainerView.addSubview(self.m_cReadletters.view)
+        self.m_cReadletters.didMove(toParentViewController: self)
+        self.m_cReadletters.view.clipsToBounds = true
+        self.m_cCurrentVC = self.m_cReadletters
+        
+    }
+
+    
+    
     
     
     
