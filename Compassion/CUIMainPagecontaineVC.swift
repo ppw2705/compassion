@@ -212,6 +212,14 @@ class CUIMainPagecontaineVC: UIViewController {
     
     func ShowReadlettersC()
     {
+        self.m_cHomeBtn.setImage(UIImage(named:"home"), for: .normal)
+        self.m_cAboutBtn.setImage(UIImage(named:"about-me"), for: .normal)
+        self.m_cMyCommunityBtn.setImage(UIImage(named:"community"), for: .normal)
+        self.m_cMyProjectBtn.setImage(UIImage(named:"my-project"), for: .normal)
+        self.m_cMyProjectLbl.textColor = UIColor.lightGray
+        self.m_cHomeLbl.textColor = UIColor.lightGray
+        self.m_cAboutLbl.textColor = UIColor.lightGray
+        self.m_cMyCommunityLbl.textColor = UIColor.lightGray
             menu_iconobj.setImage(UIImage(named: "middle-button"), for: .normal)
             menu_views.isHidden = true
             blur_views.isHidden = true

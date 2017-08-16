@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jxw-hE-CV2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jxw-hE-CV2">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -107,10 +107,10 @@
                                                             </constraints>
                                                             <state key="normal" image="close"/>
                                                         </button>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-sX-hNG">
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-sX-hNG">
                                                             <rect key="frame" x="93" y="11" width="207" height="68"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Kenya Muskathlon - June 2008" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clP-9y-An6">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Kenya Muskathlon - June 2008" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clP-9y-An6">
                                                                     <rect key="frame" x="0.0" y="9" width="207" height="16"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="16" id="JJG-7M-cDp"/>
@@ -119,7 +119,7 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cg0-Sf-5Hm">
+                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cg0-Sf-5Hm">
                                                                     <rect key="frame" x="0.0" y="46" width="207" height="20"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CHOOSE YOUR EVENT:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIV-4o-I5V">
@@ -142,7 +142,7 @@
                                                                         <constraint firstAttribute="height" constant="15" id="ce0-ce-kga"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="JOIN THE ADVENTURE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIF-Q9-EnV">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="JOIN THE ADVENTURE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIF-Q9-EnV">
                                                                     <rect key="frame" x="0.0" y="31" width="207" height="12"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="15" id="b7b-hY-r7N"/>
@@ -217,7 +217,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="childCollCell" id="JWg-VL-BZX" customClass="ChildCollectionViewCell" customModule="Compassion" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="-1" width="80" height="78"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="78"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="78"/>
@@ -247,7 +247,7 @@
                                                         <outlet property="delegate" destination="BYZ-38-t0r" id="hm8-EO-dgs"/>
                                                     </connections>
                                                 </collectionView>
-                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOS-Em-ZDa">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOS-Em-ZDa">
                                                     <rect key="frame" x="0.0" y="89" width="320" height="1"/>
                                                     <color key="backgroundColor" red="0.63137254899999995" green="0.63137254899999995" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -277,7 +277,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="355"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4t-p8-Orh">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4t-p8-Orh">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="355"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mahamadi kabre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQY-GJ-WBW">
@@ -1831,7 +1831,7 @@
                                 <rect key="frame" x="0.0" y="-5" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhJ-0U-Ed1">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhJ-0U-Ed1">
                                         <rect key="frame" x="11" y="28" width="23" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="close"/>
@@ -2749,7 +2749,7 @@
                                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hy8-Iu-cnj">
                                                             <rect key="frame" x="242" y="3" width="18" height="18"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                            <state key="normal" image="8B8A1201-A93E-472D-8E5E-397DA48E4263"/>
+                                                            <state key="normal" image="button:Hy8-Iu-cnj:image"/>
                                                         </button>
                                                     </subviews>
                                                 </tableViewCellContentView>
@@ -3464,7 +3464,18 @@
         <image name="2-12" width="360" height="360"/>
         <image name="2-login" width="1333" height="2367"/>
         <image name="3-7" width="202" height="202"/>
-        <image name="8B8A1201-A93E-472D-8E5E-397DA48E4263" width="30" height="30">
+        <image name="Blogimage4" width="1300" height="660"/>
+        <image name="Burger-side-panel-roll-out-bg" width="1158" height="477"/>
+        <image name="FAQs" width="50" height="50"/>
+        <image name="Vaccinations" width="60" height="60"/>
+        <image name="about-compassion" width="60" height="60"/>
+        <image name="about-me" width="60" height="60"/>
+        <image name="add-reminder" width="50" height="50"/>
+        <image name="arrow-1" width="30" height="30"/>
+        <image name="back-2 2" width="60" height="60"/>
+        <image name="bg" width="1333" height="633"/>
+        <image name="blog" width="50" height="50"/>
+        <image name="button:Hy8-Iu-cnj:image" width="30" height="30">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -3594,17 +3605,6 @@ QxxSHFYcXRxlHHIcdxx5HHscgByIHIsckByYHJscrRywHLUAAAAAAAACAQAAAAAAAAA+AAAAAAAAAAAA
 AAAAAAActw
 </mutableData>
         </image>
-        <image name="Blogimage4" width="1300" height="660"/>
-        <image name="Burger-side-panel-roll-out-bg" width="1158" height="477"/>
-        <image name="FAQs" width="50" height="50"/>
-        <image name="Vaccinations" width="60" height="60"/>
-        <image name="about-compassion" width="60" height="60"/>
-        <image name="about-me" width="60" height="60"/>
-        <image name="add-reminder" width="50" height="50"/>
-        <image name="arrow-1" width="30" height="30"/>
-        <image name="back-2 2" width="60" height="60"/>
-        <image name="bg" width="1333" height="633"/>
-        <image name="blog" width="50" height="50"/>
         <image name="change-child-left" width="160" height="170"/>
         <image name="change-child-right" width="160" height="170"/>
         <image name="check-box" width="30" height="30"/>
