@@ -56,6 +56,11 @@
 		4F51AEE61F39CDD000ECCE89 /* MyPhotos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F51AEE21F39CDD000ECCE89 /* MyPhotos.xib */; };
 		4F51AEE81F39CF1700ECCE89 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F51AEE71F39CF1700ECCE89 /* AboutMeViewController.swift */; };
 		4F51AEEA1F39D3F400ECCE89 /* CUIMainPagecontaineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F51AEE91F39D3F400ECCE89 /* CUIMainPagecontaineVC.swift */; };
+		4F854EA11F455FB1007D6543 /* WriteLetterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F854EA01F455FB0007D6543 /* WriteLetterController.swift */; };
+		4F854EA31F4569E9007D6543 /* Shortnote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F854EA21F4569E9007D6543 /* Shortnote.swift */; };
+		4F854EA51F456A2E007D6543 /* Shortnote.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F854EA41F456A2E007D6543 /* Shortnote.xib */; };
+		4F854EA71F456B02007D6543 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F854EA61F456B02007D6543 /* Cards.swift */; };
+		4F854EA91F456B49007D6543 /* Cards.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F854EA81F456B49007D6543 /* Cards.xib */; };
 		4F8D28C91F44150E00B7A766 /* CorrespondanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D28C81F44150E00B7A766 /* CorrespondanceController.swift */; };
 		4F8D28CB1F44191500B7A766 /* From.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D28CA1F44191500B7A766 /* From.swift */; };
 		4F8D28CD1F44195500B7A766 /* From.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8D28CC1F44195500B7A766 /* From.xib */; };
@@ -145,6 +150,11 @@
 		4F51AEE21F39CDD000ECCE89 /* MyPhotos.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPhotos.xib; sourceTree = "<group>"; };
 		4F51AEE71F39CF1700ECCE89 /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		4F51AEE91F39D3F400ECCE89 /* CUIMainPagecontaineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CUIMainPagecontaineVC.swift; sourceTree = "<group>"; };
+		4F854EA01F455FB0007D6543 /* WriteLetterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteLetterController.swift; sourceTree = "<group>"; };
+		4F854EA21F4569E9007D6543 /* Shortnote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shortnote.swift; sourceTree = "<group>"; };
+		4F854EA41F456A2E007D6543 /* Shortnote.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Shortnote.xib; sourceTree = "<group>"; };
+		4F854EA61F456B02007D6543 /* Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		4F854EA81F456B49007D6543 /* Cards.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cards.xib; sourceTree = "<group>"; };
 		4F8D28C81F44150E00B7A766 /* CorrespondanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrespondanceController.swift; sourceTree = "<group>"; };
 		4F8D28CA1F44191500B7A766 /* From.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = From.swift; sourceTree = "<group>"; };
 		4F8D28CC1F44195500B7A766 /* From.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = From.xib; sourceTree = "<group>"; };
@@ -267,6 +277,10 @@
 			children = (
 				24C449E01F28DF4F00C0D3FC /* LaunchScreen.storyboard */,
 				24C449DB1F28DF4F00C0D3FC /* Main.storyboard */,
+				4F854EA81F456B49007D6543 /* Cards.xib */,
+				4F854EA61F456B02007D6543 /* Cards.swift */,
+				4F854EA41F456A2E007D6543 /* Shortnote.xib */,
+				4F854EA21F4569E9007D6543 /* Shortnote.swift */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -315,6 +329,7 @@
 				4F341E831F31E6D200294EC5 /* LoginViewController.swift */,
 				2460D9611F3C18FA00E6B52D /* MyCommunityVC.swift */,
 				4F8D28C81F44150E00B7A766 /* CorrespondanceController.swift */,
+				4F854EA01F455FB0007D6543 /* WriteLetterController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -492,11 +507,13 @@
 				24C449E21F28DF4F00C0D3FC /* LaunchScreen.storyboard in Resources */,
 				24C449DF1F28DF4F00C0D3FC /* Assets.xcassets in Resources */,
 				4FCE73EA1F3D73C500D992C2 /* About.xib in Resources */,
+				4F854EA51F456A2E007D6543 /* Shortnote.xib in Resources */,
 				24F70E381F3C0105003C1CE2 /* Facts.xib in Resources */,
 				24C449DD1F28DF4F00C0D3FC /* Main.storyboard in Resources */,
 				24F70E361F3BF9C4003C1CE2 /* Food.xib in Resources */,
 				4FCE73EE1F3D78C400D992C2 /* Whatlearn.xib in Resources */,
 				4F51AEE41F39CDD000ECCE89 /* MyLife.xib in Resources */,
+				4F854EA91F456B49007D6543 /* Cards.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +684,8 @@
 			files = (
 				4F2B1F0B1F332427007376D8 /* VolunteerController.swift in Sources */,
 				4F341E931F31E73500294EC5 /* GiftAidController.swift in Sources */,
+				4F854EA31F4569E9007D6543 /* Shortnote.swift in Sources */,
+				4F854EA71F456B02007D6543 /* Cards.swift in Sources */,
 				246C1EFF1F2ED68200F7F107 /* BlogHeaderTableViewCell.swift in Sources */,
 				4F2B1F0D1F333DD6007376D8 /* NotanuserController.swift in Sources */,
 				4F341E941F31E73500294EC5 /* GiftThanksController.swift in Sources */,
@@ -694,6 +713,7 @@
 				4F341E971F31E73500294EC5 /* HelpViewController.swift in Sources */,
 				4F341E991F31E73500294EC5 /* LetterThanksViewController.swift in Sources */,
 				4FCE73E81F3D730500D992C2 /* About.swift in Sources */,
+				4F854EA11F455FB1007D6543 /* WriteLetterController.swift in Sources */,
 				4F2B1F051F3310B7007376D8 /* childCircle.swift in Sources */,
 				24F70E3A1F3C012F003C1CE2 /* Facts.swift in Sources */,
 				24C44A081F29085B00C0D3FC /* BlogTableViewCell.swift in Sources */,
