@@ -20,8 +20,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var menu_obj: UIButton!
     @IBOutlet weak var scroll_view: UIScrollView!
     var currentChild = 0
+    var previousChild = -1
     var childName = ["Yaneth Lucero Huarca Cordova","Dawry David De Los Santos","Fedson Jean Baptiste","Iker Matias Rincones Balderramo","Yarith Paola Vargas Iriarte"]
-    var childImg = ["https://media.ci.org/w_250,h_350,c_thumb,g_face/ChildPhotos/Published/04886112_889074.jpg","https://media.ci.org/w_250,h_350,c_thumb,g_face/v1495045051/ChildPhotos/Published/06158334_3c78a7.jpg","https://www.compassionuk.org/childimages/headshot/HA021901139.jpg","https://www.compassionuk.org/childimages/headshot/EC057200135.jpg","https://www.compassionuk.org/childimages/headshot/CO054400021.jpg"]
+    var childImg = ["https://media.ci.org/w_230,h_230,c_thumb,g_face/ChildPhotos/Published/04886112_889074.jpg","https://media.ci.org/w_230,h_230,c_thumb,g_face/v1495045051/ChildPhotos/Published/06158334_3c78a7.jpg","https://www.compassionuk.org/childimages/headshot/HA021901139.jpg","https://www.compassionuk.org/childimages/headshot/EC057200135.jpg","https://www.compassionuk.org/childimages/headshot/CO054400021.jpg"]
     
     var contents = [1,2,3,4,5,6]
     var images = [UIImage(named:"Blogimage"),UIImage(named:"Blogimage1"),UIImage(named:"Blogimage2"),UIImage(named:"Blogimage3"),UIImage(named:"Blogimage4")]
@@ -38,6 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var isalreadyClicked = false as Bool;
     var lastContentOffset: CGFloat = 0.0
     var scrollTop = false as Bool
+    var forward = false as Bool
     
     var m_cMainPagecontaineVC : CUIMainPagecontaineVC!
     
@@ -63,9 +65,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Select
 
         // Do any additional setup after loading the view, typically from a nib.
-        /*let gesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.someAction(_:)))
-        self.view.addGestureRecognizer(gesture)
-        self.scroll_view.contentSize = CGSize(width:270, height: 650)
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.someAction(_:)))
+        self.blur_view.addGestureRecognizer(gesture)
+        /*self.scroll_view.contentSize = CGSize(width:270, height: 650)
         */
         
     }
@@ -87,11 +89,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if data != nil {
             myCell.Img.image = UIImage(data:data! as Data)
         }
-        myCell.Name.text = childName[indexPath.row]
+        let fullNameArr = childName[indexPath.row].characters.split{$0 == " "}.map(String.init)
+        
+        myCell.Name.text = fullNameArr[0]
         
         myCell.Img.alpha = 0.5
         if myCell.isSelected {
             myCell.Img.alpha = 0
+        }
+        
+        if indexPath.row == 1 {
+            collectionView.selectItem(at: IndexPath(row:currentChild,section:0), animated: true, scrollPosition: .centeredHorizontally)
+            self.collectionView((collectionView), didSelectItemAt: IndexPath(row:currentChild,section:0))
         }
         
         return myCell
@@ -103,23 +112,33 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         currentChild = indexPath.row
-        let colcell = collectionView.cellForItem(at: indexPath) as! ChildCollectionViewCell
-        colcell.Img.alpha = 1
+        if currentChild != previousChild {
+            let colcell = collectionView.cellForItem(at: indexPath) as! ChildCollectionViewCell
+            colcell.Img.alpha = 1
 
         
-       let cell = self.blogTableView.dequeueReusableCell(withIdentifier: "singlechildcell", for: IndexPath(row:2,section:0)) as! singleChildTableViewCell;
-        cell.Namelbl.text = childName[currentChild]
-        let url = NSURL(string:childImg[indexPath.row])
-        let data = NSData(contentsOf:url! as URL)
-        if data != nil {
-            cell.childImage.image = UIImage(data:data! as Data)
+            let cell = self.blogTableView.dequeueReusableCell(withIdentifier: "singlechildcell", for: IndexPath(row:2,section:0)) as! singleChildTableViewCell;
+            cell.Namelbl.text = childName[currentChild]
+            let url = NSURL(string:childImg[indexPath.row])
+            let data = NSData(contentsOf:url! as URL)
+            if data != nil {
+                cell.childImage.image = UIImage(data:data! as Data)
+            }
+            //self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .none)
+            if previousChild < currentChild {
+                self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .left)
+            } else {
+                self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .right)
+            }
+            previousChild = currentChild
         }
-        self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .none)
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let colcell = collectionView.cellForItem(at: indexPath) as! ChildCollectionViewCell
-        colcell.Img.alpha = 0.5
+       // if currentChild != previousChild {
+            let colcell = collectionView.cellForItem(at: indexPath) as! ChildCollectionViewCell
+            colcell.Img.alpha = 0.5
+       // }
     }
 
     
@@ -161,15 +180,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-       /* if let lastVisibleIndexPath = tableView.indexPathsForVisibleRows?.last {
-            if indexPath == lastVisibleIndexPath {
+    /*func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let visibleRows = tableView.indexPathsForVisibleRows, let lastRow = visibleRows.last?.row, let lastSection = visibleRows.map({$0.section}).last {
+            if indexPath.row == lastRow && indexPath.section == lastSection {
                 var tableCell: ChildTableViewCell? = (self.blogTableView.cellForRow(at: IndexPath(row:1,section:0)) as? ChildTableViewCell)
                 tableCell?.collectionView.selectItem(at: IndexPath(row:currentChild,section:0), animated: true, scrollPosition: .centeredHorizontally)
                 self.collectionView((tableCell?.collectionView)!, didSelectItemAt: IndexPath(row:currentChild,section:0))
             }
-        }*/
-    }
+        }
+    }*/
     
     
     
@@ -286,7 +305,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func act(_ sender: UIButton) {
         
-//        var forward = false
         var tableCell: ChildTableViewCell? = (self.blogTableView.cellForRow(at: IndexPath(row:1,section:0)) as? ChildTableViewCell)
         //tableCell?.collectionView.reloadData()
         // Deselect
@@ -299,7 +317,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             } else {
                 currentChild -= 1
             }
-//            forward = false
+            forward = false
         }
         
         if sender.tag == 11 {
@@ -308,7 +326,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             } else {
                 currentChild += 1
             }
-//            forward = true
+            forward = true
         }
         
         

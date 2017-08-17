@@ -24,6 +24,11 @@ class AboutMeViewController: UIViewController, UIScrollViewDelegate {
     var unselectedimage = [UIImage(named:"my-family1.png"),UIImage(named:"photo1.png")]
     var titles = ["My Life + Family","My Photos"]
     
+    var currentChild = 0
+    var previousChild = -1
+    var childName = ["Yaneth Lucero Huarca Cordova","Dawry David De Los Santos","Fedson Jean Baptiste","Iker Matias Rincones Balderramo","Yarith Paola Vargas Iriarte"]
+    var childImg = ["https://media.ci.org/w_230,h_230,c_thumb,g_face/ChildPhotos/Published/04886112_889074.jpg","https://media.ci.org/w_230,h_230,c_thumb,g_face/v1495045051/ChildPhotos/Published/06158334_3c78a7.jpg","https://www.compassionuk.org/childimages/headshot/HA021901139.jpg","https://www.compassionuk.org/childimages/headshot/EC057200135.jpg","https://www.compassionuk.org/childimages/headshot/CO054400021.jpg"]
+    
     var m_cMainPagecontaineVC : CUIMainPagecontaineVC!
     var m_cMyLifePageVC       : ViewController!
     func Intitialize(cMainPagecontaineVC : CUIMainPagecontaineVC)
