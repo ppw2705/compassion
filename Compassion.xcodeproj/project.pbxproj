@@ -88,7 +88,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E1B36F866FCFAF57B8045A9 /* Pods_Compassion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Compassion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2411FEB31F4484AC00704D9A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2460D9611F3C18FA00E6B52D /* MyCommunityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCommunityVC.swift; sourceTree = "<group>"; };
 		246C1EFE1F2ED68200F7F107 /* BlogHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -224,7 +223,6 @@
 			children = (
 				24F4EE761F3B417200916F64 /* View Controllers */,
 				24F4EE751F3B3BD900916F64 /* XIB */,
-				4F8D28D21F441CA300B7A766 /* Readletters */,
 				24E2700C1F2F1D0D00F8D3A6 /* StoryBoards */,
 				24C449D71F28DF4F00C0D3FC /* AppDelegate.swift */,
 				24C449DE1F28DF4F00C0D3FC /* Assets.xcassets */,
@@ -300,6 +298,7 @@
 				242E5EB91F41D53900AD995B /* My Project */,
 				24F70E321F3BF8E8003C1CE2 /* My Community */,
 				4F51AEDE1F39CDB400ECCE89 /* About Me */,
+				4F8D28D21F441CA300B7A766 /* Readletters */,
 			);
 			name = XIB;
 			sourceTree = "<group>";
@@ -361,7 +360,6 @@
 			isa = PBXGroup;
 			children = (
 				2411FEB31F4484AC00704D9A /* QuartzCore.framework */,
-				0E1B36F866FCFAF57B8045A9 /* Pods_Compassion.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -393,9 +391,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24C449FF1F28DF4F00C0D3FC /* Build configuration list for PBXNativeTarget "CompassionTests" */;
 			buildPhases = (
+				4F4C5FB6F708FF5E4DCFC5CB /* [CP] Check Pods Manifest.lock */,
 				24C449E41F28DF4F00C0D3FC /* Sources */,
 				24C449E51F28DF4F00C0D3FC /* Frameworks */,
 				24C449E61F28DF4F00C0D3FC /* Resources */,
+				3589214B84B3BF0EEA919ED7 /* [CP] Embed Pods Frameworks */,
+				5E47238E9178C0785D66B253 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -411,9 +412,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24C44A021F28DF4F00C0D3FC /* Build configuration list for PBXNativeTarget "CompassionUITests" */;
 			buildPhases = (
+				38A8BE066C2997431D098DDA /* [CP] Check Pods Manifest.lock */,
 				24C449EF1F28DF4F00C0D3FC /* Sources */,
 				24C449F01F28DF4F00C0D3FC /* Frameworks */,
 				24C449F11F28DF4F00C0D3FC /* Resources */,
+				4478F1FC491E2873CC2D0EAC /* [CP] Embed Pods Frameworks */,
+				C2EDB0AC953A529645C8784B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -513,6 +517,72 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3589214B84B3BF0EEA919ED7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompassionTests/Pods-CompassionTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38A8BE066C2997431D098DDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CompassionUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4478F1FC491E2873CC2D0EAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompassionUITests/Pods-CompassionUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F4C5FB6F708FF5E4DCFC5CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CompassionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		574421D29E4794DE03485F01 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -541,6 +611,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "";
+			showEnvVarsInLog = 0;
+		};
+		5E47238E9178C0785D66B253 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompassionTests/Pods-CompassionTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2EDB0AC953A529645C8784B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompassionUITests/Pods-CompassionUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EB23466F6525FC80FB439319 /* [CP] Copy Pods Resources */ = {

@@ -50,7 +50,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewWillAppear(_ animated: Bool) {
         isalreadyClicked = true
-        
     }
     
     override func viewDidLoad() {
@@ -61,7 +60,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.side_menu.isHidden = true
         self.menu_obj.isHidden=true
         self.blur_view.isHidden=true
-        
+        // Select
+
         // Do any additional setup after loading the view, typically from a nib.
         /*let gesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.someAction(_:)))
         self.view.addGestureRecognizer(gesture)
@@ -161,7 +161,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+       /* if let lastVisibleIndexPath = tableView.indexPathsForVisibleRows?.last {
+            if indexPath == lastVisibleIndexPath {
+                var tableCell: ChildTableViewCell? = (self.blogTableView.cellForRow(at: IndexPath(row:1,section:0)) as? ChildTableViewCell)
+                tableCell?.collectionView.selectItem(at: IndexPath(row:currentChild,section:0), animated: true, scrollPosition: .centeredHorizontally)
+                self.collectionView((tableCell?.collectionView)!, didSelectItemAt: IndexPath(row:currentChild,section:0))
+            }
+        }*/
+    }
     
     
     
@@ -277,16 +285,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     @IBAction func act(_ sender: UIButton) {
-        var forward = false
+        
+//        var forward = false
         var tableCell: ChildTableViewCell? = (self.blogTableView.cellForRow(at: IndexPath(row:1,section:0)) as? ChildTableViewCell)
-        tableCell?.collectionView.reloadData()
+        //tableCell?.collectionView.reloadData()
+        // Deselect
+        tableCell?.collectionView.deselectItem(at: IndexPath(row:currentChild,section:0), animated: true)
+        self.collectionView((tableCell?.collectionView)!, didDeselectItemAt: IndexPath(row:currentChild,section:0))
+
         if sender.tag == 10 {
             if currentChild == 0 {
                 currentChild = childName.count - 1
             } else {
                 currentChild -= 1
             }
-            forward = false
+//            forward = false
         }
         
         if sender.tag == 11 {
@@ -295,13 +308,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             } else {
                 currentChild += 1
             }
-            forward = true
+//            forward = true
         }
         
+        
+        // Select
+        tableCell?.collectionView.selectItem(at: IndexPath(row:currentChild,section:0), animated: true, scrollPosition: .centeredHorizontally)
+        self.collectionView((tableCell?.collectionView)!, didSelectItemAt: IndexPath(row:currentChild,section:0))
     
         
 
-        var childCell = tableCell?.collectionView.cellForItem(at: IndexPath(row:currentChild,section:0)) as? ChildCollectionViewCell
+        /*var childCell = tableCell?.collectionView.cellForItem(at: IndexPath(row:currentChild,section:0)) as? ChildCollectionViewCell
         childCell?.Img.alpha = 1
         
         let cell = self.blogTableView.dequeueReusableCell(withIdentifier: "singlechildcell", for: IndexPath(row:2,section:0)) as! singleChildTableViewCell;
@@ -317,7 +334,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } else {
             self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .right)
         }
-        
+        */
             
         //}
         //tableCell?.collectionView.selectItem(at: IndexPath(row:0,section:0), animated: false, scrollPosition: .centeredHorizontally)//(at: IndexPath(row:currentChild,section:0), animated: false, scrollPosition: .centeredHorizontally)
