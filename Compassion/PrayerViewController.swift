@@ -33,23 +33,23 @@ class PrayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let slides = createSlides()
-        setupSlideScrollView(slides: slides)
-        pagecontroller.numberOfPages = slides.count
-        pagecontroller.currentPage = 0
-        line_2.isHidden = true
-        self.scroll_me.contentSize = CGSize(width:750, height: 02)
+//        let slides = createSlides()
+//        setupSlideScrollView(slides: slides)
+//        pagecontroller.numberOfPages = slides.count
+//        pagecontroller.currentPage = 0
+//        line_2.isHidden = true
+//        self.scroll_me.contentSize = CGSize(width:750, height: 02)
 
     }
     
-    func createSlides() -> [UIView] {
-        
-        let slide1:Prayer = Bundle.main.loadNibNamed("Prayer", owner: self, options: nil)?.first as! Prayer
-        
-        let slide2:ChildernPoverty = Bundle.main.loadNibNamed("ChildernPoverty", owner: self, options: nil)?.first as! ChildernPoverty
-        
-        return [slide1,slide2]
-    }
+//    func createSlides() -> [UIView] {
+//        
+//        let slide1:Prayer = Bundle.main.loadNibNamed("Prayer", owner: self, options: nil)?.first as! Prayer
+//        
+//        let slide2:ChildernPoverty = Bundle.main.loadNibNamed("ChildernPoverty", owner: self, options: nil)?.first as! ChildernPoverty
+//        
+//        return [slide1,slide2]
+//    }
 
     func setupSlideScrollView(slides:[UIView]) {
         scroll_me.frame = CGRect(x:scroll_me.frame.origin.x, y:scroll_me.frame.origin.y, width: scroll_me.frame.width, height: scroll_me.frame.height)
@@ -96,9 +96,6 @@ class PrayerViewController: UIViewController {
         frame.origin.y = 0
         scroll_me.scrollRectToVisible(frame, animated: true)
         pagecontroller.currentPage = 0
-        prayer_obj.setImage(selectedimage[0], for: .normal)
-        poverty_obj.setImage(unselectedimage[1], for: .normal)
-
     }
     
     @IBAction func poverty(_ sender: Any) {
@@ -107,8 +104,5 @@ class PrayerViewController: UIViewController {
         frame.origin.y = 0
         scroll_me.scrollRectToVisible(frame, animated: true)
         pagecontroller.currentPage = 1
-        prayer_obj.setImage(unselectedimage[0], for: .normal)
-        poverty_obj.setImage(selectedimage[1], for: .normal)
-
     }
 }

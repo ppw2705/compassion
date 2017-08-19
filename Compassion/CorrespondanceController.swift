@@ -94,13 +94,7 @@ class CorrespondanceController: UIViewController {
         frame.origin.y = 0
         scroll_main.scrollRectToVisible(frame, animated: true)
         pageControl.currentPage = 0
-        from_obj.setImage(selectedimage[0], for: .normal)
-        to_obj.setImage(unselectedimage[1], for: .normal)
-
-        
     }
-    
-    
     
     @IBAction func to_act(_ sender: Any) {
         
@@ -109,11 +103,8 @@ class CorrespondanceController: UIViewController {
         frame.origin.y = 0
         scroll_main.scrollRectToVisible(frame, animated: true)
         pageControl.currentPage = 1
-        from_obj.setImage(unselectedimage[0], for: .normal)
-        to_obj.setImage(selectedimage[1], for: .normal)
-
-        
     }
+
     @IBAction func close(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
 

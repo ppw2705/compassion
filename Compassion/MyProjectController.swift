@@ -76,11 +76,8 @@ class MyProjectController: UIViewController, UIScrollViewDelegate {
         frame.origin.y = 0
         scroll_me.scrollRectToVisible(frame, animated: true)
         pageControl.currentPage = 0
-        about_obj.setImage(selectedimage[0], for: .normal)
-        whatlrng_obj.setImage(unselectedimage[1], for: .normal)
-
-
     }
+    
     @IBAction func what_act(_ sender: Any) {
         
         var frame: CGRect = scroll_me.frame
@@ -88,12 +85,6 @@ class MyProjectController: UIViewController, UIScrollViewDelegate {
         frame.origin.y = 0
         scroll_me.scrollRectToVisible(frame, animated: true)
         pageControl.currentPage = 1
-        about_obj.setImage(unselectedimage[0], for: .normal)
-        whatlrng_obj.setImage(selectedimage[1], for: .normal)
-
-        
-
-        
     }
     
     func createSlides() -> [UIView] {

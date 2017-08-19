@@ -159,10 +159,6 @@ class MyCommunityVC: UIViewController, UIScrollViewDelegate {
         frame.origin.y = 0
         scrollView.scrollRectToVisible(frame, animated: true)
         pageControl.currentPage = 0
-        map_btn.setImage(selectedimage[0], for: .normal)
-        facts_btn.setImage(unselectedimage[1], for: .normal)
-        food_btn.setImage(unselectedimage[2], for: .normal)
-        
     }
     
     @IBAction func FactsAct(_ sender: Any) {
@@ -171,9 +167,6 @@ class MyCommunityVC: UIViewController, UIScrollViewDelegate {
         frame.origin.y = 0
         scrollView.scrollRectToVisible(frame, animated: true)
         pageControl.currentPage = 1
-        map_btn.setImage(unselectedimage[0], for: .normal)
-        facts_btn.setImage(selectedimage[1], for: .normal)
-        food_btn.setImage(unselectedimage[2], for: .normal)
     }
     
     @IBAction func FoodAct(_ sender: Any) {
@@ -182,9 +175,6 @@ class MyCommunityVC: UIViewController, UIScrollViewDelegate {
         frame.origin.y = 0
         scrollView.scrollRectToVisible(frame, animated: true)
         pageControl.currentPage = 2
-        map_btn.setImage(unselectedimage[0], for: .normal)
-        facts_btn.setImage(unselectedimage[1], for: .normal)
-        food_btn.setImage(selectedimage[2], for: .normal)
     }
 
     override func didReceiveMemoryWarning() {
