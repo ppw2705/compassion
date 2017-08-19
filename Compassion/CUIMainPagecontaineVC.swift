@@ -34,7 +34,7 @@ class CUIMainPagecontaineVC: UIViewController {
     
     var m_cReadletters      : CorrespondanceController!
     var m_cWriteletters     : WriteLetterController!
-
+    var m_cPrayer           : PrayerViewController!
 
     
     var isalreadyClicked = false as Bool;
@@ -63,6 +63,10 @@ class CUIMainPagecontaineVC: UIViewController {
         
         self.m_cWriteletters = self.storyboard?.instantiateViewController(withIdentifier: "m_cWriteletters") as! WriteLetterController
         self.m_cWriteletters.Intitialize(cMainPagecontaineVC: self)
+        
+        self.m_cPrayer = self.storyboard?.instantiateViewController(withIdentifier: "m_cPrayer") as! PrayerViewController
+        self.m_cPrayer.Intitialize(cMainPagecontaineVC: self)
+
 
 
 
@@ -278,7 +282,43 @@ class CUIMainPagecontaineVC: UIViewController {
         self.m_cCurrentVC = self.m_cWriteletters
         
     }
+    
+    
+    func PrayerShow()
+    {
+        self.m_cHomeBtn.setImage(UIImage(named:"home"), for: .normal)
+        self.m_cAboutBtn.setImage(UIImage(named:"about-me"), for: .normal)
+        self.m_cMyCommunityBtn.setImage(UIImage(named:"community"), for: .normal)
+        self.m_cMyProjectBtn.setImage(UIImage(named:"my-project"), for: .normal)
+        self.m_cMyProjectLbl.textColor = UIColor.lightGray
+        self.m_cHomeLbl.textColor = UIColor.lightGray
+        self.m_cAboutLbl.textColor = UIColor.lightGray
+        self.m_cMyCommunityLbl.textColor = UIColor.lightGray
+        menu_iconobj.setImage(UIImage(named: "middle-button"), for: .normal)
+        menu_views.isHidden = true
+        blur_views.isHidden = true
+        isalreadyClicked = true
+        
+        if (self.m_cCurrentVC != nil) && (self.m_cCurrentVC != m_cPrayer)
+        {
+            
+            self.m_cCurrentVC = m_cPrayer
+            
+        }
+        self.m_cPrayer.view.frame = self.m_cContainerView.bounds
+        self.m_cContainerView.addSubview(self.m_cPrayer.view)
+        self.m_cPrayer.didMove(toParentViewController: self)
+        self.m_cPrayer.view.clipsToBounds = true
+        self.m_cCurrentVC = self.m_cPrayer
+        
+    }
 
+    
+
+    @IBAction func prayer(_ sender: Any) {
+        
+        self.PrayerShow()
+    }
     
     
     
