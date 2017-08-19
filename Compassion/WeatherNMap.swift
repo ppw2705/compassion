@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class WeatherNMap: UIView {
 
@@ -16,6 +17,7 @@ class WeatherNMap: UIView {
     @IBOutlet weak var view_2: UIView!
     @IBOutlet weak var view_3: UIView!
     @IBOutlet weak var view_4: UIView!
+    @IBOutlet weak var mapView: GMSMapView!
     
     override func layoutSubviews() {
         super.layoutSubviews()

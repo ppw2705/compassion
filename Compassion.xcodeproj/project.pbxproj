@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2411FEB41F4484AC00704D9A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2411FEB31F4484AC00704D9A /* QuartzCore.framework */; };
+		137EB9191F85150ACDE90FCD /* Pods_CompassionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE2309AED82C4D1C5FDC491 /* Pods_CompassionTests.framework */; };
 		2460D9621F3C18FA00E6B52D /* MyCommunityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2460D9611F3C18FA00E6B52D /* MyCommunityVC.swift */; };
 		246C1EFF1F2ED68200F7F107 /* BlogHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C1EFE1F2ED68200F7F107 /* BlogHeaderTableViewCell.swift */; };
 		24C449D81F28DF4F00C0D3FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C449D71F28DF4F00C0D3FC /* AppDelegate.swift */; };
@@ -31,6 +31,7 @@
 		24F70E3A1F3C012F003C1CE2 /* Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F70E391F3C012F003C1CE2 /* Facts.swift */; };
 		24F70E3C1F3C050D003C1CE2 /* WeatherNMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F70E3B1F3C050D003C1CE2 /* WeatherNMap.xib */; };
 		24F70E3E1F3C052D003C1CE2 /* WeatherNMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F70E3D1F3C052D003C1CE2 /* WeatherNMap.swift */; };
+		41A2C48AF9189B73BD898A80 /* Pods_CompassionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC998E41571693406ADA1714 /* Pods_CompassionUITests.framework */; };
 		4F2B1F051F3310B7007376D8 /* childCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B1F041F3310B7007376D8 /* childCircle.swift */; };
 		4F2B1F071F33227B007376D8 /* SponsorplusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B1F061F33227B007376D8 /* SponsorplusController.swift */; };
 		4F2B1F091F332342007376D8 /* VolunteeroneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B1F081F332342007376D8 /* VolunteeroneController.swift */; };
@@ -73,6 +74,7 @@
 		4FCE73EA1F3D73C500D992C2 /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FCE73E91F3D73C500D992C2 /* About.xib */; };
 		4FCE73EC1F3D780400D992C2 /* whatlearn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCE73EB1F3D780400D992C2 /* whatlearn.swift */; };
 		4FCE73EE1F3D78C400D992C2 /* Whatlearn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FCE73ED1F3D78C400D992C2 /* Whatlearn.xib */; };
+		744676E6B3DE795053BF906E /* Pods_Compassion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2E0F0C2C1B9801E3A1CAB9 /* Pods_Compassion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +128,8 @@
 		24F70E391F3C012F003C1CE2 /* Facts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facts.swift; sourceTree = "<group>"; };
 		24F70E3B1F3C050D003C1CE2 /* WeatherNMap.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherNMap.xib; sourceTree = "<group>"; };
 		24F70E3D1F3C052D003C1CE2 /* WeatherNMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherNMap.swift; sourceTree = "<group>"; };
+		2E2E0F0C2C1B9801E3A1CAB9 /* Pods_Compassion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Compassion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43237911152ACDFCFFF594D4 /* Pods-CompassionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompassionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompassionTests/Pods-CompassionTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F2B1F041F3310B7007376D8 /* childCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = childCircle.swift; sourceTree = "<group>"; };
 		4F2B1F061F33227B007376D8 /* SponsorplusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorplusController.swift; sourceTree = "<group>"; };
 		4F2B1F081F332342007376D8 /* VolunteeroneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteeroneController.swift; sourceTree = "<group>"; };
@@ -168,6 +172,13 @@
 		4FCE73E91F3D73C500D992C2 /* About.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
 		4FCE73EB1F3D780400D992C2 /* whatlearn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = whatlearn.swift; sourceTree = "<group>"; };
 		4FCE73ED1F3D78C400D992C2 /* Whatlearn.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Whatlearn.xib; sourceTree = "<group>"; };
+		55DC0279F0F72D4E058475FB /* Pods-CompassionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompassionUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompassionUITests/Pods-CompassionUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		720F40A9CC58FEF5E286BC0B /* Pods-Compassion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Compassion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Compassion/Pods-Compassion.debug.xcconfig"; sourceTree = "<group>"; };
+		78204341FB58FE76F7AC855B /* Pods-Compassion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Compassion.release.xcconfig"; path = "Pods/Target Support Files/Pods-Compassion/Pods-Compassion.release.xcconfig"; sourceTree = "<group>"; };
+		7B78480EA69902DF829580B5 /* Pods-CompassionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompassionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompassionUITests/Pods-CompassionUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DAE2309AED82C4D1C5FDC491 /* Pods_CompassionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompassionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC998E41571693406ADA1714 /* Pods_CompassionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompassionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF70AFE8935EA866290D9910 /* Pods-CompassionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompassionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompassionTests/Pods-CompassionTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2411FEB41F4484AC00704D9A /* QuartzCore.framework in Frameworks */,
+				744676E6B3DE795053BF906E /* Pods_Compassion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137EB9191F85150ACDE90FCD /* Pods_CompassionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A2C48AF9189B73BD898A80 /* Pods_CompassionUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +229,7 @@
 				24C449F61F28DF4F00C0D3FC /* CompassionUITests */,
 				24C449D51F28DF4F00C0D3FC /* Products */,
 				A7A17F53EE6BD464BED1B103 /* Frameworks */,
+				25FA1E11E94A31DE771B8C31 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -348,6 +362,19 @@
 			name = "My Community";
 			sourceTree = "<group>";
 		};
+		25FA1E11E94A31DE771B8C31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				720F40A9CC58FEF5E286BC0B /* Pods-Compassion.debug.xcconfig */,
+				78204341FB58FE76F7AC855B /* Pods-Compassion.release.xcconfig */,
+				FF70AFE8935EA866290D9910 /* Pods-CompassionTests.debug.xcconfig */,
+				43237911152ACDFCFFF594D4 /* Pods-CompassionTests.release.xcconfig */,
+				55DC0279F0F72D4E058475FB /* Pods-CompassionUITests.debug.xcconfig */,
+				7B78480EA69902DF829580B5 /* Pods-CompassionUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4F51AEDE1F39CDB400ECCE89 /* About Me */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +404,9 @@
 			children = (
 				24666F081F45A19E003E0019 /* CoreData.framework */,
 				2411FEB31F4484AC00704D9A /* QuartzCore.framework */,
+				2E2E0F0C2C1B9801E3A1CAB9 /* Pods_Compassion.framework */,
+				DAE2309AED82C4D1C5FDC491 /* Pods_CompassionTests.framework */,
+				EC998E41571693406ADA1714 /* Pods_CompassionUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -608,13 +638,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Compassion-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5D9E521B1118914E94A37EF0 /* [CP] Embed Pods Frameworks */ = {
@@ -629,7 +662,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Compassion/Pods-Compassion-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5E47238E9178C0785D66B253 /* [CP] Copy Pods Resources */ = {
@@ -668,13 +701,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Compassion/Pods-Compassion-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Compassion/Pods-Compassion-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -883,6 +919,7 @@
 		};
 		24C449FD1F28DF4F00C0D3FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 720F40A9CC58FEF5E286BC0B /* Pods-Compassion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -904,6 +941,7 @@
 		};
 		24C449FE1F28DF4F00C0D3FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78204341FB58FE76F7AC855B /* Pods-Compassion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -924,6 +962,7 @@
 		};
 		24C44A001F28DF4F00C0D3FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF70AFE8935EA866290D9910 /* Pods-CompassionTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -939,6 +978,7 @@
 		};
 		24C44A011F28DF4F00C0D3FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43237911152ACDFCFFF594D4 /* Pods-CompassionTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -954,6 +994,7 @@
 		};
 		24C44A031F28DF4F00C0D3FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55DC0279F0F72D4E058475FB /* Pods-CompassionUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = QDYX5WECPU;
@@ -968,6 +1009,7 @@
 		};
 		24C44A041F28DF4F00C0D3FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B78480EA69902DF829580B5 /* Pods-CompassionUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = QDYX5WECPU;

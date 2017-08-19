@@ -25,7 +25,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="kUZ-Tr-9R9">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="164"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="165"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mahamadi Kabre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhp-0b-opx">
@@ -55,7 +55,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Years Old" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6io-94-dOC">
-                            <rect key="frame" x="222" y="106" width="60" height="21"/>
+                            <rect key="frame" x="222" y="109" width="60" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                             <nil key="textColor"/>
@@ -73,7 +73,7 @@
                             <color key="backgroundColor" red="0.1333333333" green="0.61176470589999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dominica Republic" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7b-sK-d3w">
-                            <rect key="frame" x="26" y="106" width="83" height="34"/>
+                            <rect key="frame" x="26" y="109" width="83" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                             <nil key="textColor"/>
@@ -195,6 +195,8 @@
             </subviews>
             <connections>
                 <outlet property="ageLbl" destination="0Li-0c-cLp" id="Pcg-Km-51C"/>
+                <outlet property="childImg" destination="CJ0-ij-DfU" id="AKJ-Ff-nyK"/>
+                <outlet property="childName" destination="uhp-0b-opx" id="Mwg-13-Hje"/>
                 <outlet property="countryV" destination="si1-M3-HCO" id="jo4-8h-4do"/>
                 <outlet property="scrolle_me" destination="2df-es-oKk" id="7Ut-EH-US6"/>
             </connections>

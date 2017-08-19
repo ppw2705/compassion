@@ -19,10 +19,20 @@ class MyProjectController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var about_lbl: UILabel!
     @IBOutlet weak var learning_lbl: UILabel!
+    var m_cAboutSlide : About!
+    var m_cLearnSlide : whatlearn!
     var selectedimage = [UIImage(named:"1-11"),UIImage(named:"2.1")]
     
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var backward_btn: UIButton!
+    @IBOutlet weak var forward_btn: UIButton!
     var unselectedimage = [UIImage(named:"1.1-3"),UIImage(named:"2-11")]
     var titles = ["",""]
+    
+    var currentChild = 0
+    var previousChild = -1
+    var childName = ["Yaneth Lucero Huarca Cordova","Dawry David De Los Santos","Fedson Jean Baptiste","Iker Matias Rincones Balderramo","Yarith Paola Vargas Iriarte"]
+    var childImg = ["https://media.ci.org/w_230,h_230,c_thumb,g_face/ChildPhotos/Published/04886112_889074.jpg","https://media.ci.org/w_230,h_230,c_thumb,g_face/v1495045051/ChildPhotos/Published/06158334_3c78a7.jpg","https://www.compassionuk.org/childimages/headshot/HA021901139.jpg","https://www.compassionuk.org/childimages/headshot/EC057200135.jpg","https://www.compassionuk.org/childimages/headshot/CO054400021.jpg"]
 
     var m_cMainPagecontaineVC : CUIMainPagecontaineVC!
     var m_cMyLifePageVC       : ViewController!
@@ -43,7 +53,14 @@ class MyProjectController: UIViewController, UIScrollViewDelegate {
         view_2.isHidden = true
         
         self.scroll_me.contentSize = CGSize(width:750, height: 02)
-
+        let fullNameArr = childName[0].characters.split{$0 == " "}.map(String.init)
+        titleLbl.text = fullNameArr[0] + "'s Project"
+        m_cAboutSlide.childName.text = childName[0]
+        let url = NSURL(string:childImg[0])
+        let data = NSData(contentsOf:url! as URL)
+        if data != nil {
+            m_cAboutSlide.childImg.image = UIImage(data:data! as Data)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,7 +100,11 @@ class MyProjectController: UIViewController, UIScrollViewDelegate {
         
         let slide1:About = Bundle.main.loadNibNamed("About", owner: self, options: nil)?.first as! About
         
+        m_cAboutSlide = slide1
+        
         let slide2:whatlearn = Bundle.main.loadNibNamed("Whatlearn", owner: self, options: nil)?.first as! whatlearn
+        
+        m_cLearnSlide = slide2
         
         return [slide1,slide2]
     }
@@ -134,7 +155,47 @@ class MyProjectController: UIViewController, UIScrollViewDelegate {
                 self.top_menu.transform = CGAffineTransform(translationX: 0, y: 0)
             })
         }
-
+    }
+    
+    @IBAction func act(_ sender: UIButton) {
+        
+        var forward = false
+        if sender.tag == 10 {
+            if currentChild == 0 {
+                currentChild = childName.count - 1
+            } else {
+                currentChild -= 1
+            }
+            forward = false
+        }
+        
+        if sender.tag == 11 {
+            if currentChild == childName.count - 1 {
+                currentChild = 0
+            } else {
+                currentChild += 1
+            }
+            forward = true
+        }
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = kCATransitionPush
+        if forward {
+            transition.subtype = kCATransitionFromRight
+        } else {
+            transition.subtype = kCATransitionFromLeft
+        }
+        
+        scroll_me!.layer.add(transition, forKey: kCATransition)
+        let fullNameArr = childName[currentChild].characters.split{$0 == " "}.map(String.init)
+        titleLbl.text = fullNameArr[0] + "'s Project"
+        m_cAboutSlide.childName.text = childName[currentChild]
+        let url = NSURL(string:childImg[currentChild])
+        let data = NSData(contentsOf:url! as URL)
+        if data != nil {
+            m_cAboutSlide.childImg.image = UIImage(data:data! as Data)
+        }
+        
         
     }
 

@@ -306,7 +306,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func act(_ sender: UIButton) {
         
         var tableCell: ChildTableViewCell? = (self.blogTableView.cellForRow(at: IndexPath(row:1,section:0)) as? ChildTableViewCell)
-        //tableCell?.collectionView.reloadData()
         // Deselect
         tableCell?.collectionView.deselectItem(at: IndexPath(row:currentChild,section:0), animated: true)
         self.collectionView((tableCell?.collectionView)!, didDeselectItemAt: IndexPath(row:currentChild,section:0))
@@ -333,30 +332,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Select
         tableCell?.collectionView.selectItem(at: IndexPath(row:currentChild,section:0), animated: true, scrollPosition: .centeredHorizontally)
         self.collectionView((tableCell?.collectionView)!, didSelectItemAt: IndexPath(row:currentChild,section:0))
-    
-        
-
-        /*var childCell = tableCell?.collectionView.cellForItem(at: IndexPath(row:currentChild,section:0)) as? ChildCollectionViewCell
-        childCell?.Img.alpha = 1
-        
-        let cell = self.blogTableView.dequeueReusableCell(withIdentifier: "singlechildcell", for: IndexPath(row:2,section:0)) as! singleChildTableViewCell;
-
-            cell.Namelbl.text = childName[currentChild]
-            let url = NSURL(string:childImg[currentChild])
-            let data = NSData(contentsOf:url! as URL)
-            if data != nil {
-                cell.childImage.image = UIImage(data:data! as Data)
-            }
-        if forward {
-            self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .left)
-        } else {
-            self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .right)
-        }
-        */
-            
-        //}
-        //tableCell?.collectionView.selectItem(at: IndexPath(row:0,section:0), animated: false, scrollPosition: .centeredHorizontally)//(at: IndexPath(row:currentChild,section:0), animated: false, scrollPosition: .centeredHorizontally)
-        //tableCell?.collectionView.reloadData()
     }
     
     

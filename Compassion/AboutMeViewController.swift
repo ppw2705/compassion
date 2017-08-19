@@ -19,11 +19,16 @@ class AboutMeViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var MyLifeBtn: UIButton!
     @IBOutlet weak var MyPhotosBtn: UIButton!
     @IBOutlet weak var scroll_me: UIScrollView!
+    @IBOutlet weak var backward_btn: UIButton!
+    @IBOutlet weak var forward_btn: UIButton!
     
+    @IBOutlet weak var titleLbl: UILabel!
     var selectedimage = [UIImage(named:"my-family.png"),UIImage(named:"photo.png")]
     var unselectedimage = [UIImage(named:"my-family1.png"),UIImage(named:"photo1.png")]
     var titles = ["My Life + Family","My Photos"]
     
+    var m_cLifeSlide : MyLife!;
+    var m_cPhotosSlide : MyPhotos!;
     var currentChild = 0
     var previousChild = -1
     var childName = ["Yaneth Lucero Huarca Cordova","Dawry David De Los Santos","Fedson Jean Baptiste","Iker Matias Rincones Balderramo","Yarith Paola Vargas Iriarte"]
@@ -52,13 +57,25 @@ class AboutMeViewController: UIViewController, UIScrollViewDelegate {
         MyLifeBtn.isSelected = false
         //view.bringSubview(toFront: pageControl)
         self.scroll_me.contentSize = CGSize(width:750, height: 02)
+        let fullNameArr = childName[0].characters.split{$0 == " "}.map(String.init)
+        titleLbl.text = "About " + fullNameArr[0]
+        m_cLifeSlide.childName.text = childName[0]
+        let url = NSURL(string:childImg[0])
+        let data = NSData(contentsOf:url! as URL)
+        if data != nil {
+            m_cLifeSlide.childImg.image = UIImage(data:data! as Data)
+        }
         
     }
     
     func createSlides() -> [UIView] {
-        let slide1:MyLife = Bundle.main.loadNibNamed("MyLife", owner: self, options: nil)?.first as! MyLife
+        let slide1:MyLife =  Bundle.main.loadNibNamed("MyLife", owner: self, options: nil)?.first as! MyLife
+        
+        m_cLifeSlide = slide1
         
         let slide2:MyPhotos = Bundle.main.loadNibNamed("MyPhotos", owner: self, options: nil)?.first as! MyPhotos
+        
+         m_cPhotosSlide = slide2
 
         return [slide1,slide2]
     }
@@ -125,6 +142,48 @@ class AboutMeViewController: UIViewController, UIScrollViewDelegate {
         pageControl.currentPage = 1
         MyLifeBtn.setImage(unselectedimage[0], for: .normal)
         MyPhotosBtn.setImage(selectedimage[1], for: .normal)
+    }
+    
+    @IBAction func act(_ sender: UIButton) {
+        
+       var forward = false
+        if sender.tag == 10 {
+            if currentChild == 0 {
+                currentChild = childName.count - 1
+            } else {
+                currentChild -= 1
+            }
+            forward = false
+        }
+        
+        if sender.tag == 11 {
+            if currentChild == childName.count - 1 {
+                currentChild = 0
+            } else {
+                currentChild += 1
+            }
+           forward = true
+        }
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = kCATransitionPush
+        if forward {
+            transition.subtype = kCATransitionFromRight
+        } else {
+            transition.subtype = kCATransitionFromLeft
+        }
+        
+        scrollView!.layer.add(transition, forKey: kCATransition)
+        let fullNameArr = childName[currentChild].characters.split{$0 == " "}.map(String.init)
+        titleLbl.text = "About " + fullNameArr[0]
+        m_cLifeSlide.childName.text = childName[currentChild]
+        let url = NSURL(string:childImg[currentChild])
+        let data = NSData(contentsOf:url! as URL)
+        if data != nil {
+            m_cLifeSlide.childImg.image = UIImage(data:data! as Data)
+        }
+
+        
     }
     
     override func didReceiveMemoryWarning() {

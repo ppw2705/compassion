@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jxw-hE-CV2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jxw-hE-CV2">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -107,7 +107,7 @@
                                                             </constraints>
                                                             <state key="normal" image="close"/>
                                                         </button>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-sX-hNG">
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-sX-hNG">
                                                             <rect key="frame" x="93" y="14" width="207" height="68"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Kenya Muskathlon - June 2008" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clP-9y-An6">
@@ -217,7 +217,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="childCollCell" id="JWg-VL-BZX" customClass="ChildCollectionViewCell" customModule="Compassion" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="-1" width="80" height="78"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="78"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="78"/>
@@ -247,7 +247,7 @@
                                                         <outlet property="delegate" destination="BYZ-38-t0r" id="hm8-EO-dgs"/>
                                                     </connections>
                                                 </collectionView>
-                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOS-Em-ZDa">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOS-Em-ZDa">
                                                     <rect key="frame" x="0.0" y="89" width="320" height="1"/>
                                                     <color key="backgroundColor" red="0.63137254899999995" green="0.63137254899999995" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -277,7 +277,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="355"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4t-p8-Orh">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4t-p8-Orh">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="355"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mahamadi kabre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQY-GJ-WBW">
@@ -439,7 +439,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcb-0V-C5R">
-                                <rect key="frame" x="0.0" y="259" width="40" height="49"/>
+                                <rect key="frame" x="0.0" y="259" width="40" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="change-child-left"/>
                                 <connections>
@@ -724,7 +724,7 @@
                                 <rect key="frame" x="11" y="508" width="140" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqO-J5-b53">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqO-J5-b53">
                                         <rect key="frame" x="1" y="0.0" width="110" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.25882352939999997" green="0.3803921569" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -748,7 +748,7 @@
                                 <rect key="frame" x="170" y="508" width="140" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ue3-os-YUo">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ue3-os-YUo">
                                         <rect key="frame" x="1" y="0.0" width="110" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.25882352939999997" green="0.3803921569" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1093,11 +1093,11 @@
                                 <rect key="frame" x="16" y="244" width="286" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zml-80-MZu">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zml-80-MZu">
                                         <rect key="frame" x="1" y="0.0" width="242" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.13725490200000001" green="0.6588235294" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <inset key="titleEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="1"/>
                                         <state key="normal" title="Log in">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1154,7 +1154,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbW-dP-opy">
-                                        <rect key="frame" x="23" y="3" width="61" height="61"/>
+                                        <rect key="frame" x="23" y="8" width="61" height="61"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="map"/>
                                         <connections>
@@ -1237,16 +1237,15 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCa-y8-9WV">
-                                <rect key="frame" x="0.0" y="143" width="320" height="426"/>
+                                <rect key="frame" x="0.0" y="144" width="320" height="425"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </scrollView>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OH5-Fp-IpW">
-                                <rect key="frame" x="284" y="262" width="35" height="45"/>
+                                <rect key="frame" x="285" y="262" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="right-3.1"/>
                                 <connections>
-                                    <action selector="act:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iUu-mR-rwS"/>
-                                    <action selector="fWord:" destination="ZPk-EL-7Ui" eventType="touchUpInside" id="PZB-JA-P3n"/>
+                                    <action selector="act:" destination="ZPk-EL-7Ui" eventType="touchUpInside" id="dCA-nu-rb0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrS-Nh-TOp">
@@ -1254,8 +1253,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="left3.2"/>
                                 <connections>
-                                    <action selector="act:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uu4-k7-ufJ"/>
-                                    <action selector="bAck:" destination="ZPk-EL-7Ui" eventType="touchUpInside" id="UPM-9r-svL"/>
+                                    <action selector="act:" destination="ZPk-EL-7Ui" eventType="touchUpInside" id="967-yb-lD7"/>
                                 </connections>
                             </button>
                             <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="sLW-qL-tXf">
@@ -1285,15 +1283,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="backward_btn" destination="KrS-Nh-TOp" id="roV-J3-yci"/>
                         <outlet property="factsView" destination="jIi-TN-YZx" id="Lj5-yY-pMX"/>
                         <outlet property="facts_btn" destination="0RJ-Vh-Ga3" id="zfy-oP-jpR"/>
                         <outlet property="foodView" destination="KcG-VT-vv1" id="tLv-6x-foZ"/>
                         <outlet property="food_btn" destination="hGQ-f0-KBk" id="8rs-Wt-STR"/>
+                        <outlet property="forward_btn" destination="OH5-Fp-IpW" id="nNX-NQ-111"/>
                         <outlet property="mapView" destination="zxr-X0-esQ" id="1fJ-Ss-jsP"/>
                         <outlet property="map_btn" destination="hbW-dP-opy" id="ZaM-aX-Z3R"/>
                         <outlet property="pageControl" destination="sLW-qL-tXf" id="lNa-PG-98E"/>
                         <outlet property="scrollView" destination="ZCa-y8-9WV" id="uZ7-tM-ZgA"/>
                         <outlet property="scroll_me" destination="ZCa-y8-9WV" id="e7J-f0-wIj"/>
+                        <outlet property="titleLbl" destination="h8S-VI-PfD" id="ZdA-Eb-Km0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KzT-50-hme" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2879,7 +2880,7 @@
                                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hy8-Iu-cnj">
                                                             <rect key="frame" x="242" y="3" width="18" height="18"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                            <state key="normal" image="99C775B8-B726-4BEF-A98B-5B6C09FE2072"/>
+                                                            <state key="normal" image="button:Hy8-Iu-cnj:image"/>
                                                         </button>
                                                     </subviews>
                                                 </tableViewCellContentView>
@@ -3231,7 +3232,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="change-child-left"/>
                                 <connections>
-                                    <action selector="act:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mUc-Mc-JhF"/>
+                                    <action selector="act:" destination="J9O-4c-wns" eventType="touchUpInside" id="wt0-gd-ZJg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3W-ix-b58">
@@ -3239,7 +3240,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="change-child-right"/>
                                 <connections>
-                                    <action selector="act:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y9j-yN-BAg"/>
+                                    <action selector="act:" destination="J9O-4c-wns" eventType="touchUpInside" id="osn-1A-2lh"/>
                                 </connections>
                             </button>
                             <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="oEy-c6-VQx">
@@ -3254,9 +3255,12 @@
                         <outlet property="MyLifeView" destination="Jcw-bG-bv4" id="dBA-2O-j51"/>
                         <outlet property="MyPhotosBtn" destination="bSK-Hm-gDb" id="a8t-Zs-zko"/>
                         <outlet property="MyphotosView" destination="Wod-dk-HLH" id="lfm-uD-yRZ"/>
+                        <outlet property="backward_btn" destination="HGW-Lu-Ya6" id="aBX-JY-Pdt"/>
+                        <outlet property="forward_btn" destination="t3W-ix-b58" id="G3U-sn-v24"/>
                         <outlet property="pageControl" destination="oEy-c6-VQx" id="lMb-dA-kFj"/>
                         <outlet property="scrollView" destination="RNP-bb-RpL" id="sqw-ux-ylp"/>
                         <outlet property="scroll_me" destination="RNP-bb-RpL" id="95t-Xl-w44"/>
+                        <outlet property="titleLbl" destination="KEt-WX-VLW" id="yYM-Y3-QOI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEq-xC-XnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3554,19 +3558,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </scrollView>
                             <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PK3-0f-19U">
-                                <rect key="frame" x="0.0" y="259" width="40" height="49"/>
+                                <rect key="frame" x="0.0" y="261" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="left2.1"/>
                                 <connections>
-                                    <action selector="act:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fTx-1B-S3l"/>
+                                    <action selector="act:" destination="Kqh-rc-8zZ" eventType="touchUpInside" id="ush-Dv-X0r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wd-g8-SSY">
-                                <rect key="frame" x="280" y="259" width="40" height="50"/>
+                                <rect key="frame" x="285" y="259" width="35" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="right2.2"/>
                                 <connections>
-                                    <action selector="act:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gp9-bg-4uh"/>
+                                    <action selector="act:" destination="Kqh-rc-8zZ" eventType="touchUpInside" id="2uz-lO-6o0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3575,9 +3579,12 @@
                     <connections>
                         <outlet property="about_lbl" destination="6Qo-Gr-5GQ" id="xEs-pT-pMr"/>
                         <outlet property="about_obj" destination="93a-o1-wdy" id="OXd-C4-ZXC"/>
+                        <outlet property="backward_btn" destination="PK3-0f-19U" id="Bl5-oP-0V2"/>
+                        <outlet property="forward_btn" destination="9Wd-g8-SSY" id="aRB-f6-3z1"/>
                         <outlet property="learning_lbl" destination="TSD-AR-u2q" id="Z5f-k5-8YY"/>
                         <outlet property="pageControl" destination="3jI-oZ-fxX" id="gAA-j8-Joa"/>
                         <outlet property="scroll_me" destination="MTc-ph-oe6" id="Kce-a2-X2y"/>
+                        <outlet property="titleLbl" destination="0cO-aF-cvu" id="t9D-9x-CFm"/>
                         <outlet property="top_menu" destination="bvl-Kl-e7E" id="IZr-Ek-zss"/>
                         <outlet property="view_1" destination="pGP-Za-pPY" id="XeM-Dd-Hn7"/>
                         <outlet property="view_2" destination="OG7-qW-dIO" id="J7O-FI-1DK"/>
@@ -3596,7 +3603,18 @@
         <image name="2-12" width="360" height="360"/>
         <image name="2-login" width="1333" height="2367"/>
         <image name="3-7" width="202" height="202"/>
-        <image name="99C775B8-B726-4BEF-A98B-5B6C09FE2072" width="30" height="30">
+        <image name="Blogimage4" width="1300" height="660"/>
+        <image name="Burger-side-panel-roll-out-bg" width="1158" height="477"/>
+        <image name="FAQs" width="50" height="50"/>
+        <image name="Vaccinations" width="60" height="60"/>
+        <image name="about-compassion" width="60" height="60"/>
+        <image name="about-me" width="60" height="60"/>
+        <image name="add-reminder" width="50" height="50"/>
+        <image name="arrow-1" width="30" height="30"/>
+        <image name="back-2 2" width="60" height="60"/>
+        <image name="bg" width="1333" height="633"/>
+        <image name="blog" width="50" height="50"/>
+        <image name="button:Hy8-Iu-cnj:image" width="30" height="30">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -3726,17 +3744,6 @@ QxxSHFYcXRxlHHIcdxx5HHscgByIHIsckByYHJscrRywHLUAAAAAAAACAQAAAAAAAAA+AAAAAAAAAAAA
 AAAAAAActw
 </mutableData>
         </image>
-        <image name="Blogimage4" width="1300" height="660"/>
-        <image name="Burger-side-panel-roll-out-bg" width="1158" height="477"/>
-        <image name="FAQs" width="50" height="50"/>
-        <image name="Vaccinations" width="60" height="60"/>
-        <image name="about-compassion" width="60" height="60"/>
-        <image name="about-me" width="60" height="60"/>
-        <image name="add-reminder" width="50" height="50"/>
-        <image name="arrow-1" width="30" height="30"/>
-        <image name="back-2 2" width="60" height="60"/>
-        <image name="bg" width="1333" height="633"/>
-        <image name="blog" width="50" height="50"/>
         <image name="card1" width="130" height="130"/>
         <image name="change-child-left" width="160" height="170"/>
         <image name="change-child-right" width="160" height="170"/>
