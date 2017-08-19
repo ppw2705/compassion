@@ -69,6 +69,11 @@ class CUIMainPagecontaineVC: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool)
+    {
+        Animate()
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -312,6 +317,15 @@ class CUIMainPagecontaineVC: UIViewController {
       
     }
     
-
+    func Animate()
+    {
+        self.view.frame.origin.x = self.view.frame.width
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations:
+            {
+                self.view.frame.origin.x = 0
+            
+        }, completion: nil)
+    }
    
 }

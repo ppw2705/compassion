@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate {
     
+     var CSponserchildRequestHandler          : SponserchildRequestHandler!
+    
+    @IBOutlet weak var tpview: UIView!
     @IBOutlet weak var blogTableView: UITableView!
     
     @IBOutlet weak var blur_view: UIView!
@@ -52,10 +55,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewWillAppear(_ animated: Bool) {
         isalreadyClicked = true
+        
+        tpview.isHidden = true
+        
+        self.SendChildInfoRequest()
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         self.CSponserchildRequestHandler = SponserchildRequestHandler(completionHandler: self.ChildInfoRequestCallback)
         
         //menu_views.isHidden=true
         //blur_views.isHidden=true
@@ -211,7 +221,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
          blogTableView.reloadData()
          }
          print(completelyVisible)*/
-        if lastContentOffset < scrollView.contentOffset.y {
+        if lastContentOffset < scrollView.contentOffset.y
+        {
             //print("bottom")
             let cellRect = self.blogTableView.rectForRow(at: IndexPath(row:1,section:1))
             let completelyVisible = self.blogTableView.bounds.contains(cellRect)
@@ -219,7 +230,35 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             if completelyVisible {
                 sectionSelected = true
-                blogTableView.reloadData()
+                //blogTableView.reloadData()
+                
+               /* UIView.animate(withDuration: 2, delay: 1, options: UIViewAnimationOptions.curveEaseOut, animations: { }, completion: ({ _ in
+                    
+                    self.tpview.isHidden = false
+                    }
+                ))*/
+                
+//                UIView.animate(withDuration: 2, delay: 1, options: UIViewAnimationOptions.overrideInheritedOptions, animations:
+//                    {
+//                       self.tpview.isHidden = false
+//                        
+//                }, completion: nil)
+                
+                self.tpview.isHidden = false
+                self.tpview.frame.size.width  = 0
+                
+                UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations:
+                    {
+                        self.tpview.frame.origin.y = self.blogTableView.frame.origin.y
+                        self.tpview.frame.origin.x = self.blogTableView.frame.origin.x
+                         //self.tpview.center         = self.view.center
+                        self.tpview.frame.size.width  = self.view.frame.size.width
+                       
+                        
+                }, completion: nil)
+                
+                
+                
                 //self.blogTableView.beginUpdates()
                 //cellToShow?.isHidden = false
                 //self.blogTableView.endUpdates()
@@ -241,13 +280,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                  self.blogTableView.reloadRows(at: [indexPath2, indexPath1], with: UITableViewRowAnimation.automatic)*/
             }
             
-        } else if lastContentOffset > scrollView.contentOffset.y {
+        }
+        else if lastContentOffset > scrollView.contentOffset.y
+        {
             //print("top")
             let cellRect = self.blogTableView.rectForRow(at: IndexPath(row:2,section:0))
             let completelyVisible = self.blogTableView.bounds.contains(cellRect)
             if completelyVisible {
                 sectionSelected = false
-                blogTableView.reloadData()
+                //blogTableView.reloadData()
+                 tpview.isHidden = true
+                
+                
+                
+                
                 //self.blogTableView.beginUpdates()
                 //self.blogTableView.endUpdates()
             }
@@ -288,11 +334,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return 0.0
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if section == 1 {
-            var cell:BlogHeaderTableViewCell = self.blogTableView.dequeueReusableCell(withIdentifier: "headercell") as! BlogHeaderTableViewCell;
-            return cell;
-        }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    {
+      
+//        if section == 1
+//        {
+//            var cell:BlogHeaderTableViewCell = self.blogTableView.dequeueReusableCell(withIdentifier: "headercell") as! BlogHeaderTableViewCell;
+//            cell.SetupSection()
+//            return cell;
+//        }
         return nil
     }
     
@@ -338,14 +388,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func menu_act(_ sender: Any) {
         
         
-        let transition = CATransition()
-        transition.duration = 0.2
-        transition.type = kCATransitionPush
-        transition.subtype = kCATransitionFromLeft
-        self.side_menu.window!.layer.add(transition, forKey: kCATransition)
-        self.side_menu.isHidden = false
-        //self.not_obj.isHidden=true
-        self.blur_view.isHidden=false
+        SendChildInfoRequest()
+        
+//        let transition = CATransition()
+//        transition.duration = 0.2
+//        transition.type = kCATransitionPush
+//        transition.subtype = kCATransitionFromLeft
+//        self.side_menu.window!.layer.add(transition, forKey: kCATransition)
+//        self.side_menu.isHidden = false
+//        //self.not_obj.isHidden=true
+//        self.blur_view.isHidden=false
 
         
         
@@ -521,6 +573,39 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func about_meacts(_ sender: Any) {
     }
     
+    
+   
+   
+    
+    
+    func SendChildInfoRequest()
+    {
+        CSponserchildRequestHandler.CSponserchildRequest.UserId = "229207"
+        CSponserchildRequestHandler.HTTPSendRequest()
+    }
+    
+    func ChildInfoRequestCallback(cSender:NSObject, nErrorCode:Int16, cErrorString:String)
+    {
+        
+        DispatchQueue.main.async
+            {
+            
+            
+            
+//            if nErrorCode == CTDeOperationStatus.OS_SUCCESS.rawValue
+//            {
+//                //self.OnSuccess()
+//                
+//                print("success...!!!!!!!")
+//            }
+//            else
+//            {
+//                print("error in response \(cErrorString)")
+//            }
+        }
+        
+    }
+
 
 }
 

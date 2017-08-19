@@ -51,10 +51,10 @@ class AboutMeViewController: UIViewController, UIScrollViewDelegate {
         pageControl.numberOfPages = slides.count
         pageControl.currentPage = 0
         MyphotosView.isHidden = true
-        MyPhotosBtn.isHighlighted = false
-        MyLifeBtn.isHighlighted = false
-        MyPhotosBtn.isSelected = false
-        MyLifeBtn.isSelected = false
+//        MyPhotosBtn.isHighlighted = false
+//        MyLifeBtn.isHighlighted = false
+//        MyPhotosBtn.isSelected = false
+//        MyLifeBtn.isSelected = false
         //view.bringSubview(toFront: pageControl)
         self.scroll_me.contentSize = CGSize(width:750, height: 02)
         let fullNameArr = childName[0].characters.split{$0 == " "}.map(String.init)
@@ -116,32 +116,35 @@ class AboutMeViewController: UIViewController, UIScrollViewDelegate {
     }
 
     @IBAction func MylifeAct(_ sender: Any) {
-        MyPhotosBtn.isHighlighted = false
-        MyLifeBtn.isHighlighted = false
-        MyPhotosBtn.isSelected = false
-        MyLifeBtn.isSelected = false
+        //MyPhotosBtn.isHighlighted = false
+        //MyLifeBtn.isHighlighted = false
+        //MyPhotosBtn.isSelected = false
+        //MyLifeBtn.isSelected = false
         var frame: CGRect = scrollView.frame
         frame.origin.x = frame.size.width * 0
         frame.origin.y = 0
         scrollView.scrollRectToVisible(frame, animated: true)
         pageControl.currentPage = 0
 
-        MyLifeBtn.setImage(selectedimage[0], for: .normal)
-        MyPhotosBtn.setImage(unselectedimage[1], for: .normal)
+       // UIImage(named:"my-family.png"),UIImage(named:"photo.png")
+        //MyLifeBtn.setImage(UIImage(named:"my-family"), for: .normal)
+        //MyLifeBtn.setImage(selectedimage[0], for: .normal)
+        //MyPhotosBtn.setImage(unselectedimage[1], for: .normal)
+        //MyPhotosBtn.setImage(UIImage(named:"photo.png"), for: .normal)
     }
     
     @IBAction func MyPhotosAct(_ sender: Any) {
-        MyPhotosBtn.isHighlighted = false
-        MyLifeBtn.isHighlighted = false
-        MyPhotosBtn.isSelected = false
-        MyLifeBtn.isSelected = false
+       // MyPhotosBtn.isHighlighted = false
+       // MyLifeBtn.isHighlighted = false
+        //MyPhotosBtn.isSelected = false
+        //MyLifeBtn.isSelected = false
         var frame: CGRect = scrollView.frame
         frame.origin.x = frame.size.width * 1
         frame.origin.y = 0
         scrollView.scrollRectToVisible(frame, animated: true)
         pageControl.currentPage = 1
-        MyLifeBtn.setImage(unselectedimage[0], for: .normal)
-        MyPhotosBtn.setImage(selectedimage[1], for: .normal)
+        //MyLifeBtn.setImage(unselectedimage[0], for: .normal)
+        //MyPhotosBtn.setImage(selectedimage[1], for: .normal)
     }
     
     @IBAction func act(_ sender: UIButton) {

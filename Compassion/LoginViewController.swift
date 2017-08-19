@@ -111,12 +111,12 @@ class LoginViewController: UIViewController {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mainPage = storyBoard.instantiateViewController(withIdentifier: "CUIMainPagecontaineVC") as! CUIMainPagecontaineVC
         
-        let transition = CATransition()
-        transition.duration = 0.3
-        transition.type = kCATransitionPush
-        transition.subtype = kCATransitionFromRight
-        view.window!.layer.add(transition, forKey: kCATransition)
-        self.present(mainPage, animated: false, completion: nil)
+//        let transition = CATransition()
+//        transition.duration = 0.3
+//        transition.type = kCATransitionPush
+//        transition.subtype = kCATransitionFromRight
+//        view.window!.layer.add(transition, forKey: kCATransition)
+       self.present(mainPage, animated: false, completion: nil)
 
         
     }
