@@ -38,6 +38,16 @@
 		4F2B1F0B1F332427007376D8 /* VolunteerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B1F0A1F332427007376D8 /* VolunteerController.swift */; };
 		4F2B1F0D1F333DD6007376D8 /* NotanuserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B1F0C1F333DD6007376D8 /* NotanuserController.swift */; };
 		4F2B1F0F1F333F0B007376D8 /* NotUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B1F0E1F333F0B007376D8 /* NotUserTableViewCell.swift */; };
+		4F2F0E711F48109C001E4DC3 /* PreviewLetterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F0E701F48109C001E4DC3 /* PreviewLetterController.swift */; };
+		4F2F0E751F481FA2001E4DC3 /* PrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F0E741F481FA2001E4DC3 /* PrayerViewController.swift */; };
+		4F2F0E771F483260001E4DC3 /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F0E761F483260001E4DC3 /* Prayer.swift */; };
+		4F2F0E791F48328E001E4DC3 /* Prayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F2F0E781F48328E001E4DC3 /* Prayer.xib */; };
+		4F2F0E7B1F4832FD001E4DC3 /* ChildernPoverty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F0E7A1F4832FD001E4DC3 /* ChildernPoverty.swift */; };
+		4F2F0E7D1F483372001E4DC3 /* ChildernPoverty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F2F0E7C1F483372001E4DC3 /* ChildernPoverty.xib */; };
+		4F2F0E821F4855F7001E4DC3 /* PointsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F0E801F4855F7001E4DC3 /* PointsTableViewCell.swift */; };
+		4F2F0E831F4855F7001E4DC3 /* PointsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F2F0E811F4855F7001E4DC3 /* PointsTableViewCell.xib */; };
+		4F2F0E861F485E7C001E4DC3 /* PovertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F0E841F485E7C001E4DC3 /* PovertyTableViewCell.swift */; };
+		4F2F0E871F485E7C001E4DC3 /* PovertyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F2F0E851F485E7C001E4DC3 /* PovertyTableViewCell.xib */; };
 		4F341E841F31E6D200294EC5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F341E821F31E6D200294EC5 /* LoginController.swift */; };
 		4F341E851F31E6D200294EC5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F341E831F31E6D200294EC5 /* LoginViewController.swift */; };
 		4F341E911F31E73500294EC5 /* BlogTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F341E861F31E73500294EC5 /* BlogTableCell.swift */; };
@@ -136,6 +146,16 @@
 		4F2B1F0A1F332427007376D8 /* VolunteerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerController.swift; sourceTree = "<group>"; };
 		4F2B1F0C1F333DD6007376D8 /* NotanuserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotanuserController.swift; sourceTree = "<group>"; };
 		4F2B1F0E1F333F0B007376D8 /* NotUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotUserTableViewCell.swift; sourceTree = "<group>"; };
+		4F2F0E701F48109C001E4DC3 /* PreviewLetterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewLetterController.swift; sourceTree = "<group>"; };
+		4F2F0E741F481FA2001E4DC3 /* PrayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerViewController.swift; sourceTree = "<group>"; };
+		4F2F0E761F483260001E4DC3 /* Prayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prayer.swift; sourceTree = "<group>"; };
+		4F2F0E781F48328E001E4DC3 /* Prayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Prayer.xib; sourceTree = "<group>"; };
+		4F2F0E7A1F4832FD001E4DC3 /* ChildernPoverty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildernPoverty.swift; sourceTree = "<group>"; };
+		4F2F0E7C1F483372001E4DC3 /* ChildernPoverty.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildernPoverty.xib; sourceTree = "<group>"; };
+		4F2F0E801F4855F7001E4DC3 /* PointsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsTableViewCell.swift; sourceTree = "<group>"; };
+		4F2F0E811F4855F7001E4DC3 /* PointsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PointsTableViewCell.xib; sourceTree = "<group>"; };
+		4F2F0E841F485E7C001E4DC3 /* PovertyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PovertyTableViewCell.swift; sourceTree = "<group>"; };
+		4F2F0E851F485E7C001E4DC3 /* PovertyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PovertyTableViewCell.xib; sourceTree = "<group>"; };
 		4F341E821F31E6D200294EC5 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		4F341E831F31E6D200294EC5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4F341E861F31E73500294EC5 /* BlogTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableCell.swift; sourceTree = "<group>"; };
@@ -252,6 +272,7 @@
 				24C449D71F28DF4F00C0D3FC /* AppDelegate.swift */,
 				24C449DE1F28DF4F00C0D3FC /* Assets.xcassets */,
 				24C449E31F28DF4F00C0D3FC /* Info.plist */,
+				4F2F0E701F48109C001E4DC3 /* PreviewLetterController.swift */,
 				4F2B1F0C1F333DD6007376D8 /* NotanuserController.swift */,
 				4F2B1F061F33227B007376D8 /* SponsorplusController.swift */,
 				4F2B1F081F332342007376D8 /* VolunteeroneController.swift */,
@@ -292,6 +313,14 @@
 			children = (
 				24C449E01F28DF4F00C0D3FC /* LaunchScreen.storyboard */,
 				24C449DB1F28DF4F00C0D3FC /* Main.storyboard */,
+				4F2F0E841F485E7C001E4DC3 /* PovertyTableViewCell.swift */,
+				4F2F0E851F485E7C001E4DC3 /* PovertyTableViewCell.xib */,
+				4F2F0E801F4855F7001E4DC3 /* PointsTableViewCell.swift */,
+				4F2F0E811F4855F7001E4DC3 /* PointsTableViewCell.xib */,
+				4F2F0E7C1F483372001E4DC3 /* ChildernPoverty.xib */,
+				4F2F0E7A1F4832FD001E4DC3 /* ChildernPoverty.swift */,
+				4F2F0E781F48328E001E4DC3 /* Prayer.xib */,
+				4F2F0E761F483260001E4DC3 /* Prayer.swift */,
 				4F854EA81F456B49007D6543 /* Cards.xib */,
 				4F854EA61F456B02007D6543 /* Cards.swift */,
 				4F854EA41F456A2E007D6543 /* Shortnote.xib */,
@@ -345,6 +374,7 @@
 				2460D9611F3C18FA00E6B52D /* MyCommunityVC.swift */,
 				4F8D28C81F44150E00B7A766 /* CorrespondanceController.swift */,
 				4F854EA01F455FB0007D6543 /* WriteLetterController.swift */,
+				4F2F0E741F481FA2001E4DC3 /* PrayerViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -531,6 +561,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2F0E831F4855F7001E4DC3 /* PointsTableViewCell.xib in Resources */,
 				24F70E3C1F3C050D003C1CE2 /* WeatherNMap.xib in Resources */,
 				4F8D28CD1F44195500B7A766 /* From.xib in Resources */,
 				4F8D28D11F441C6C00B7A766 /* To.xib in Resources */,
@@ -539,12 +570,15 @@
 				24C449E21F28DF4F00C0D3FC /* LaunchScreen.storyboard in Resources */,
 				24C449DF1F28DF4F00C0D3FC /* Assets.xcassets in Resources */,
 				4FCE73EA1F3D73C500D992C2 /* About.xib in Resources */,
+				4F2F0E871F485E7C001E4DC3 /* PovertyTableViewCell.xib in Resources */,
 				4F854EA51F456A2E007D6543 /* Shortnote.xib in Resources */,
 				24F70E381F3C0105003C1CE2 /* Facts.xib in Resources */,
 				24C449DD1F28DF4F00C0D3FC /* Main.storyboard in Resources */,
 				24F70E361F3BF9C4003C1CE2 /* Food.xib in Resources */,
 				4FCE73EE1F3D78C400D992C2 /* Whatlearn.xib in Resources */,
 				4F51AEE41F39CDD000ECCE89 /* MyLife.xib in Resources */,
+				4F2F0E791F48328E001E4DC3 /* Prayer.xib in Resources */,
+				4F2F0E7D1F483372001E4DC3 /* ChildernPoverty.xib in Resources */,
 				4F854EA91F456B49007D6543 /* Cards.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -720,6 +754,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2F0E771F483260001E4DC3 /* Prayer.swift in Sources */,
 				4F2B1F0B1F332427007376D8 /* VolunteerController.swift in Sources */,
 				4F341E931F31E73500294EC5 /* GiftAidController.swift in Sources */,
 				4F854EA31F4569E9007D6543 /* Shortnote.swift in Sources */,
@@ -729,11 +764,14 @@
 				4F341E941F31E73500294EC5 /* GiftThanksController.swift in Sources */,
 				4F8D28C91F44150E00B7A766 /* CorrespondanceController.swift in Sources */,
 				4F8D28D51F442AE900B7A766 /* LettersCollectionCell.swift in Sources */,
+				4F2F0E7B1F4832FD001E4DC3 /* ChildernPoverty.swift in Sources */,
 				2460D9621F3C18FA00E6B52D /* MyCommunityVC.swift in Sources */,
 				24F70E341F3BF9B3003C1CE2 /* Food.swift in Sources */,
 				24C44A0A1F29928700C0D3FC /* NotifyTableViewCell.swift in Sources */,
 				24C449DA1F28DF4F00C0D3FC /* ViewController.swift in Sources */,
+				4F2F0E861F485E7C001E4DC3 /* PovertyTableViewCell.swift in Sources */,
 				4F8D28CF1F4419AA00B7A766 /* To.swift in Sources */,
+				4F2F0E711F48109C001E4DC3 /* PreviewLetterController.swift in Sources */,
 				4F51AEE81F39CF1700ECCE89 /* AboutMeViewController.swift in Sources */,
 				4F341E851F31E6D200294EC5 /* LoginViewController.swift in Sources */,
 				4F341E9A1F31E73500294EC5 /* MyLifeController.swift in Sources */,
@@ -741,6 +779,7 @@
 				4F51AEE31F39CDD000ECCE89 /* MyLife.swift in Sources */,
 				4F2B1F091F332342007376D8 /* VolunteeroneController.swift in Sources */,
 				24C44A121F2A18B600C0D3FC /* singleChildTableViewCell.swift in Sources */,
+				4F2F0E821F4855F7001E4DC3 /* PointsTableViewCell.swift in Sources */,
 				4F341E961F31E73500294EC5 /* GiftWalletViewController.swift in Sources */,
 				4F341E9B1F31E73500294EC5 /* NotiPrefenController.swift in Sources */,
 				4F341E921F31E73500294EC5 /* BlogViewController.swift in Sources */,
@@ -750,6 +789,7 @@
 				4F341E981F31E73500294EC5 /* InspiringfilmsController.swift in Sources */,
 				4F341E971F31E73500294EC5 /* HelpViewController.swift in Sources */,
 				4F341E991F31E73500294EC5 /* LetterThanksViewController.swift in Sources */,
+				4F2F0E751F481FA2001E4DC3 /* PrayerViewController.swift in Sources */,
 				4FCE73E81F3D730500D992C2 /* About.swift in Sources */,
 				4F854EA11F455FB1007D6543 /* WriteLetterController.swift in Sources */,
 				4F2B1F051F3310B7007376D8 /* childCircle.swift in Sources */,
