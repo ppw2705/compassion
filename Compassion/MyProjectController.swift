@@ -56,11 +56,7 @@ class MyProjectController: UIViewController, UIScrollViewDelegate {
         let fullNameArr = childName[0].characters.split{$0 == " "}.map(String.init)
         titleLbl.text = fullNameArr[0] + "'s Project"
         m_cAboutSlide.childName.text = childName[0]
-        let url = NSURL(string:childImg[0])
-        let data = NSData(contentsOf:url! as URL)
-        if data != nil {
-            m_cAboutSlide.childImg.image = UIImage(data:data! as Data)
-        }
+        m_cAboutSlide.childImg.sd_setImage(with: URL(string: childImg[currentChild]), placeholderImage: UIImage(named: "child4.png"))
     }
 
     override func didReceiveMemoryWarning() {
@@ -181,12 +177,7 @@ class MyProjectController: UIViewController, UIScrollViewDelegate {
         let fullNameArr = childName[currentChild].characters.split{$0 == " "}.map(String.init)
         titleLbl.text = fullNameArr[0] + "'s Project"
         m_cAboutSlide.childName.text = childName[currentChild]
-        let url = NSURL(string:childImg[currentChild])
-        let data = NSData(contentsOf:url! as URL)
-        if data != nil {
-            m_cAboutSlide.childImg.image = UIImage(data:data! as Data)
-        }
-        
+        m_cAboutSlide.childImg.sd_setImage(with: URL(string: childImg[currentChild]), placeholderImage: UIImage(named: "child4.png"))
         
     }
 

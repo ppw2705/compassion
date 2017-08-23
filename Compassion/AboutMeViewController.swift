@@ -55,11 +55,12 @@ class AboutMeViewController: UIViewController, UIScrollViewDelegate {
         let fullNameArr = childName[0].characters.split{$0 == " "}.map(String.init)
         titleLbl.text = "About " + fullNameArr[0]
         m_cLifeSlide.childName.text = childName[0]
-        let url = NSURL(string:childImg[0])
+        m_cLifeSlide.childImg.sd_setImage(with: URL(string: childImg[currentChild]), placeholderImage: UIImage(named: "child4.png"))
+        /*let url = NSURL(string:childImg[0])
         let data = NSData(contentsOf:url! as URL)
         if data != nil {
             m_cLifeSlide.childImg.image = UIImage(data:data! as Data)
-        }
+        }*/
         
     }
     
@@ -159,13 +160,13 @@ class AboutMeViewController: UIViewController, UIScrollViewDelegate {
         let fullNameArr = childName[currentChild].characters.split{$0 == " "}.map(String.init)
         titleLbl.text = "About " + fullNameArr[0]
         m_cLifeSlide.childName.text = childName[currentChild]
-        let url = NSURL(string:childImg[currentChild])
+        m_cLifeSlide.childImg.sd_setImage(with: URL(string: childImg[currentChild]), placeholderImage: UIImage(named: "child4.png"))
+        /*let url = NSURL(string:childImg[currentChild])
         let data = NSData(contentsOf:url! as URL)
         if data != nil {
             m_cLifeSlide.childImg.image = UIImage(data:data! as Data)
-        }
+        }*/
 
-        
     }
     
     override func didReceiveMemoryWarning() {

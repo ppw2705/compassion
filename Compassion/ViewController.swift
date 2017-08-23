@@ -7,6 +7,8 @@
 // Paresh
 
 import UIKit
+//import SDWebImage
+
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate {
     
@@ -15,6 +17,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tpview: UIView!
     @IBOutlet weak var blogTableView: UITableView!
     
+    @IBOutlet weak var tpChildName: UILabel!
+    @IBOutlet weak var tpSponsorshipLbl: UILabel!
+    @IBOutlet weak var tpChildImg: UIImageView!
     @IBOutlet weak var blur_view: UIView!
     @IBOutlet weak var backward_btn: UIButton!
     @IBOutlet weak var forward_btn: UIButton!
@@ -57,8 +62,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         isalreadyClicked = true
         
         tpview.isHidden = true
-        
-        self.SendChildInfoRequest()
+        tpChildImg.clipsToBounds = true
+        tpChildImg.layer.cornerRadius = tpChildImg.frame.size.height/2;
+//        self.SendChildInfoRequest()
         
     }
     
@@ -67,8 +73,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
          self.CSponserchildRequestHandler = SponserchildRequestHandler(completionHandler: self.ChildInfoRequestCallback)
         
-        //menu_views.isHidden=true
-        //blur_views.isHidden=true
         self.side_menu.isHidden = true
         self.menu_obj.isHidden=true
         self.blur_view.isHidden=true
@@ -94,11 +98,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "childCollCell", for: indexPath) as! ChildCollectionViewCell
         
-        let url = NSURL(string:childImg[indexPath.row])
+        /*let url = NSURL(string:childImg[indexPath.row])
         let data = NSData(contentsOf:url! as URL)
         if data != nil {
             myCell.Img.image = UIImage(data:data! as Data)
-        }
+        }*/
+        myCell.Img.sd_setImage(with: URL(string: childImg[indexPath.row]), placeholderImage: UIImage(named: "child4.png"))
+        
         let fullNameArr = childName[indexPath.row].characters.split{$0 == " "}.map(String.init)
         
         myCell.Name.text = fullNameArr[0]
@@ -129,17 +135,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
             let cell = self.blogTableView.dequeueReusableCell(withIdentifier: "singlechildcell", for: IndexPath(row:2,section:0)) as! singleChildTableViewCell;
             cell.Namelbl.text = childName[currentChild]
-            let url = NSURL(string:childImg[indexPath.row])
-            let data = NSData(contentsOf:url! as URL)
-            if data != nil {
-                cell.childImage.image = UIImage(data:data! as Data)
-            }
+            
+            cell.childImage.sd_setImage(with: URL(string: childImg[indexPath.row]), placeholderImage: UIImage(named: "child4.png"))
             //self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .none)
             if previousChild < currentChild {
                 self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .left)
             } else {
                 self.blogTableView.reloadRows(at: [IndexPath(row:2,section:0)], with: .right)
             }
+            
+            self.tpChildImg.sd_setImage(with: URL(string: childImg[indexPath.row]), placeholderImage: UIImage(named: "child4.png"))
+            self.tpChildName.text = childName[indexPath.row]
             previousChild = currentChild
         }
     }
@@ -182,6 +188,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }else {
             let cell = self.blogTableView.dequeueReusableCell(withIdentifier: "blogcell", for: indexPath) as! BlogTableViewCell;
             cell.blogImage.image = images[indexPath.row];
+            //cell.blogImage.sd_setImage(with: URL(string: childImg[indexPath.row]), placeholderImage: UIImage(named: "child4.png"))
             cell.titlelbl.text = titles[indexPath.row];
             cell.datelbl.text = dates[indexPath.row];
             cell.desclbl.text = details[indexPath.row];
@@ -189,19 +196,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
     }
-    
-    /*func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let visibleRows = tableView.indexPathsForVisibleRows, let lastRow = visibleRows.last?.row, let lastSection = visibleRows.map({$0.section}).last {
-            if indexPath.row == lastRow && indexPath.section == lastSection {
-                var tableCell: ChildTableViewCell? = (self.blogTableView.cellForRow(at: IndexPath(row:1,section:0)) as? ChildTableViewCell)
-                tableCell?.collectionView.selectItem(at: IndexPath(row:currentChild,section:0), animated: true, scrollPosition: .centeredHorizontally)
-                self.collectionView((tableCell?.collectionView)!, didSelectItemAt: IndexPath(row:currentChild,section:0))
-            }
-        }
-    }*/
-    
-    
-    
     
     
     @objc func deleteCell(sender:UIButton){
@@ -211,73 +205,35 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        /*if lastContentOffset < scrollView.
-         
-         lastContentOffset = scrollView.contentOffset.x
-         let cellRect = self.blogTableView.rectForRow(at: IndexPath(row:0,section:1))
-         let completelyVisible = self.blogTableView.bounds.contains(cellRect)
-         if completelyVisible {
-         sectionSelected = true
-         blogTableView.reloadData()
-         }
-         print(completelyVisible)*/
+
         if lastContentOffset < scrollView.contentOffset.y
         {
             //print("bottom")
             let cellRect = self.blogTableView.rectForRow(at: IndexPath(row:1,section:1))
             let completelyVisible = self.blogTableView.bounds.contains(cellRect)
-            var cellToShow: singleChildTableViewCell? = (self.blogTableView.cellForRow(at: IndexPath(row:0,section:1)) as? singleChildTableViewCell)
             
-            if completelyVisible {
-                sectionSelected = true
-                //blogTableView.reloadData()
-                
-               /* UIView.animate(withDuration: 2, delay: 1, options: UIViewAnimationOptions.curveEaseOut, animations: { }, completion: ({ _ in
-                    
-                    self.tpview.isHidden = false
-                    }
-                ))*/
-                
-//                UIView.animate(withDuration: 2, delay: 1, options: UIViewAnimationOptions.overrideInheritedOptions, animations:
-//                    {
-//                       self.tpview.isHidden = false
-//                        
-//                }, completion: nil)
-                
+            if !sectionVisible && completelyVisible {
+                tpChildImg.isHidden = true
+                tpChildName.isHidden = true
+                tpSponsorshipLbl.isHidden = true
+
                 self.tpview.isHidden = false
-                self.tpview.frame.size.width  = 0
+                let height = self.tpview.frame.size.height
+                self.tpview.frame.size.height  = 0
                 
-                UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations:
-                    {
-                        self.tpview.frame.origin.y = self.blogTableView.frame.origin.y
-                        self.tpview.frame.origin.x = self.blogTableView.frame.origin.x
-                         //self.tpview.center         = self.view.center
-                        self.tpview.frame.size.width  = self.view.frame.size.width
-                       
-                        
-                }, completion: nil)
-                
-                
-                
-                //self.blogTableView.beginUpdates()
-                //cellToShow?.isHidden = false
-                //self.blogTableView.endUpdates()
-                /*self.blogTableView.beginUpdates()
-                UIView.animate(withDuration: 0.2, animations: {
-                    cellToHide?.alpha = 0
-                    //cell
-                }, completion: ({ _ in
+                    sectionVisible = true
+                    UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations:
+                        {
+                            self.tpview.frame.origin.y = self.blogTableView.frame.origin.y
+                            self.tpview.frame.origin.x = self.blogTableView.frame.origin.x
+                            //self.tpview.center         = self.view.center
+                            self.tpview.frame.size.height  = height
                     
-                    cellToHide?.alpha = 1
-                    
-                    }
-                    )
-                    
-                )
-                self.blogTableView.endUpdates()*/
-                /*let indexPath1 = IndexPath(row:0,section:1)
-                 let indexPath2 = IndexPath(row:2,section:0)
-                 self.blogTableView.reloadRows(at: [indexPath2, indexPath1], with: UITableViewRowAnimation.automatic)*/
+                    }, completion: ({ _ in
+                        self.tpChildImg.isHidden = false
+                        self.tpChildName.isHidden = false
+                        self.tpSponsorshipLbl.isHidden = false
+                    }))
             }
             
         }
@@ -285,17 +241,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         {
             //print("top")
             let cellRect = self.blogTableView.rectForRow(at: IndexPath(row:2,section:0))
+            let cell : singleChildTableViewCell = self.blogTableView.dequeueReusableCell(withIdentifier: "singlechildcell", for: IndexPath(row:2,section:0)) as! singleChildTableViewCell
+            var cellY = cell.bounds.origin.y + 420
+
             let completelyVisible = self.blogTableView.bounds.contains(cellRect)
-            if completelyVisible {
-                sectionSelected = false
-                //blogTableView.reloadData()
-                 tpview.isHidden = true
-                
-                
-                
-                
-                //self.blogTableView.beginUpdates()
-                //self.blogTableView.endUpdates()
+            
+            if scrollView.contentOffset.y <= cellY {
+
+                if sectionVisible {
+                    //print("hide the header")
+                    tpview.isHidden = true
+                }
+                sectionVisible = false
             }
             
         } else {
@@ -316,33 +273,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if indexPath.section == 0 && indexPath.row == 1{
             return 90.0
         }
-        
-        if sectionSelected == false && indexPath.section == 0 && indexPath.row == 2{
+        if indexPath.section == 0 && indexPath.row == 2{
             return 353.0
-        }
-        if sectionSelected == true && indexPath.section == 0 && indexPath.row == 2{
-            return 0.0
         }
         
         return 245.0
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if sectionSelected == true && section == 1 {
-            return 90.0
-        }
         return 0.0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
     {
-      
-//        if section == 1
-//        {
-//            var cell:BlogHeaderTableViewCell = self.blogTableView.dequeueReusableCell(withIdentifier: "headercell") as! BlogHeaderTableViewCell;
-//            cell.SetupSection()
-//            return cell;
-//        }
         return nil
     }
     
@@ -388,16 +331,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func menu_act(_ sender: Any) {
         
         
-        SendChildInfoRequest()
+//        SendChildInfoRequest()
         
-//        let transition = CATransition()
-//        transition.duration = 0.2
-//        transition.type = kCATransitionPush
-//        transition.subtype = kCATransitionFromLeft
-//        self.side_menu.window!.layer.add(transition, forKey: kCATransition)
-//        self.side_menu.isHidden = false
-//        //self.not_obj.isHidden=true
-//        self.blur_view.isHidden=false
+        let transition = CATransition()
+        transition.duration = 0.2
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromLeft
+        self.side_menu.window!.layer.add(transition, forKey: kCATransition)
+        self.side_menu.isHidden = false
+        self.blur_view.isHidden=false
 
         
         
@@ -406,6 +348,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func noti_view(_ sender: Any) {
         
     }
+    
     func someAction(_ sender:UITapGestureRecognizer){
         if self.side_menu.isHidden == false {
             
@@ -415,14 +358,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             transition.type = kCATransitionPush
             transition.subtype = kCATransitionFromRight
             self.side_menu.window!.layer.add(transition, forKey: kCATransition)
-//            self.side_menu.isHidden = true
-//            self.not_obj.isHidden=false
             self.side_menu.isHidden = true
             self.not_obj.isHidden=false
             self.blur_view.isHidden=true
 
             
-        }}
+        }
+    }
     
     /*@IBAction func close_act(_ sender: Any) {
         
@@ -443,8 +385,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     @IBAction func blog_acts(_ sender: Any) {
-        
-        //        self.side_menu.isHidden = true
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let HelpViewC = storyBoard.instantiateViewController(withIdentifier: "BlogViewControl") as! BlogViewController
