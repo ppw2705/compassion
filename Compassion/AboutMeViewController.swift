@@ -45,6 +45,13 @@ class AboutMeViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        m_cMainPagecontaineVC.blur_views.isHidden = false
+        m_cMainPagecontaineVC.menu_iconobj.isHidden = true
+        m_cMainPagecontaineVC.blur_views.backgroundColor = UIColor.blue
+        m_cMainPagecontaineVC.blur_views.alpha = 1
+        
+        m_cMainPagecontaineVC.activityIndicatorView.startAnimating()
+
         scrollView.delegate = self
         let slides = createSlides()
         setupSlideScrollView(slides: slides)
@@ -56,12 +63,19 @@ class AboutMeViewController: UIViewController, UIScrollViewDelegate {
         titleLbl.text = "About " + fullNameArr[0]
         m_cLifeSlide.childName.text = childName[0]
         m_cLifeSlide.childImg.sd_setImage(with: URL(string: childImg[currentChild]), placeholderImage: UIImage(named: "child4.png"))
+
         /*let url = NSURL(string:childImg[0])
         let data = NSData(contentsOf:url! as URL)
         if data != nil {
             m_cLifeSlide.childImg.image = UIImage(data:data! as Data)
         }*/
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        m_cMainPagecontaineVC.activityIndicatorView.stopAnimating()
+        m_cMainPagecontaineVC.blur_views.isHidden = true
+        m_cMainPagecontaineVC.menu_iconobj.isHidden = false
     }
     
     func createSlides() -> [UIView] {

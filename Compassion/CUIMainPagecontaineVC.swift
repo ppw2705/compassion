@@ -25,6 +25,10 @@ class CUIMainPagecontaineVC: UIViewController {
     @IBOutlet weak var m_cHomeLbl: UILabel!
     @IBOutlet weak var m_cAboutLbl: UILabel!
     
+
+    let activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 50, y: 50, width: 100, height: 50),
+                                                        type: NVActivityIndicatorType.ballBeat)
+
     
     var m_cCurrentVC        : UIViewController!
     var m_cHomePageVC       : ViewController!
@@ -67,10 +71,6 @@ class CUIMainPagecontaineVC: UIViewController {
         self.m_cPrayer = self.storyboard?.instantiateViewController(withIdentifier: "m_cPrayer") as! PrayerViewController
         self.m_cPrayer.Intitialize(cMainPagecontaineVC: self)
 
-
-
-
-        
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -81,6 +81,7 @@ class CUIMainPagecontaineVC: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.view.addSubview(activityIndicatorView)
         isalreadyClicked = true
         menu_views.isHidden=true
         blur_views.isHidden=true
@@ -156,6 +157,7 @@ class CUIMainPagecontaineVC: UIViewController {
             self.m_cCurrentVC = m_cAboutmeVC
             
         }
+
         
         self.m_cAboutmeVC.view.frame = self.m_cContainerView.bounds
         self.m_cContainerView.addSubview(self.m_cAboutmeVC.view)
@@ -170,7 +172,6 @@ class CUIMainPagecontaineVC: UIViewController {
         self.m_cHomeLbl.textColor = UIColor.lightGray
         self.m_cAboutLbl.textColor = UIColor.black
         self.m_cMyCommunityLbl.textColor = UIColor.lightGray
-        
     }
     
     func ShowMyCommunityVC()

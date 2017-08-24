@@ -82,8 +82,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let gesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.someAction(_:)))
         self.blur_view.addGestureRecognizer(gesture)
         /*self.scroll_view.contentSize = CGSize(width:270, height: 650)
-        */
-        
+        */        
     }
     
     override func didReceiveMemoryWarning() {

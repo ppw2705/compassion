@@ -46,6 +46,13 @@ class MyCommunityVC: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        m_cMainPagecontaineVC.blur_views.isHidden = false
+        m_cMainPagecontaineVC.menu_iconobj.isHidden = true
+        m_cMainPagecontaineVC.blur_views.backgroundColor = UIColor.blue
+        m_cMainPagecontaineVC.blur_views.alpha = 1
+        
+        m_cMainPagecontaineVC.activityIndicatorView.startAnimating()
+        
         scrollView.delegate = self
         let slides = createSlides()
         setupSlideScrollView(slides: slides)
@@ -87,6 +94,12 @@ class MyCommunityVC: UIViewController, UIScrollViewDelegate {
             }
             task.resume()
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        m_cMainPagecontaineVC.activityIndicatorView.stopAnimating()
+        m_cMainPagecontaineVC.blur_views.isHidden = true
+        m_cMainPagecontaineVC.menu_iconobj.isHidden = false
     }
     
     func createSlides() -> [UIView] {
